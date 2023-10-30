@@ -39,3 +39,6 @@
 *.fdb_latexmk
 *.synctex.gz
 
+# Swap files
+*.swp
+
