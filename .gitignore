@@ -6,7 +6,6 @@
 *.lo
 *.o
 *.obj
-*.out
 
 # Precompiled Headers
 *.gch
@@ -31,3 +30,12 @@
 *.exe
 *.out
 *.app
+
+# Latex temp. files
+*.aux
+*.fls
+*.log
+*.toc
+*.fdb_latexmk
+*.synctex.gz
+
