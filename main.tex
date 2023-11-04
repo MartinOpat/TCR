@@ -1,4 +1,10 @@
-\documentclass[answers]{exam}
+\documentclass[
+	a4paper,
+	landscape,
+	%twoside,
+	10pt,
+	article
+]{article}
 
 % DO NOT REMOVE
 \input{sources/packages.tex}
@@ -11,11 +17,24 @@
 \newcommand{\mycoursename}{TCR}
 
 
+%*************** Table of Contents ***************
+\usepackage[toc]{multitoc}			% multicolumn toc
+\usepackage{tocloft}				% to reduce toc spacing
+\renewcommand*{\multicolumntoc}{2}
+% reduce section spacing in toc
+\setlength{\cftbeforesecskip}{-1pt}
+\setlength{\cftbeforesubsecskip}{-1.5pt}
+% remove the toc title
+\makeatletter
+\renewcommand{\@cftmaketoctitle}{}
+\makeatother
+
 \begin{document}
-\tableofcontents \newpage
+\setcounter{tocdepth}{3}
+\tableofcontents
 
 \section{Setup}
-\entry{header.h}{}{code/header.h}
+\otherentry{header.h}{}{code/header.h}
 \otherentry{Bash for c++ compile with header.h}{}{compile_c++.sh}
 \otherentry{Bash for run tests c++}{}{code/test_cpp.sh}
 \otherentry{Bash for run tests python}{}{code/test_py.sh}
@@ -36,6 +55,7 @@
 \section{C++}
 \subsection{Graphs}
     \entry{BFS}{}{code/Graphs/bfs_filtered.cpp}
+
 \subsection{Dynamic Programming}
 \subsection{Trees}
 \subsection{Number Theory}

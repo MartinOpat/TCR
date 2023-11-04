@@ -1,18 +1,22 @@
 \usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
 \usepackage{enumerate}
 \usepackage{enumitem}
 \usepackage{mathtools}
-\usepackage{amsmath, amssymb}
+\usepackage{textcomp}
+\usepackage{amsmath, amssymb, amsfonts}
 \usepackage{xcolor}
 \usepackage{float}
 \usepackage{caption}
 \usepackage{indentfirst}
 \usepackage{changepage}
 \usepackage{tabto}
+\usepackage{graphicx}
 \usepackage{lipsum}
 \usepackage[export]{adjustbox}
 \usepackage{multicol}
 \usepackage{scalerel,stackengine}
+\usepackage{ifthen}
 \stackMath
 
 \usepackage{xurl}
@@ -25,16 +29,20 @@
     urlcolor = violet
 }
 
-\usepackage{geometry}
-\geometry{
-    a4paper,
-     % total = {170mm,257mm},
-     % a3paper,
-    left = 10mm,
-    right = 10mm,
-    top = 15mm,
-    bottom = 15mm
- }
+\usepackage[
+	a4paper,
+	landscape,
+	twocolumn,
+	left=0.8cm,
+	right=0.3cm,
+% Weird top and bottom margins because of fancyhdr package
+	top=1.8cm,
+	bottom=-0.3cm,
+	columnsep=1cm,
+% Set margins on even and odd pages equal
+	hmarginratio=1:1,
+	asymmetric
+]{geometry}
 
 \usepackage{listings}
 % \lstset{
@@ -76,9 +84,9 @@
 \titleformat{\section}[runin]
   {\normalfont\large\bfseries}{\thesection}{1em}{}[]
 
-\titleformat{\subsection}[runin]
-  {\normalfont\normalsize\bfseries}{\thesubsection}{1em}{}[]
-\titlespacing{\subsection}{0pt}{0pt}{0pt} % Adjust the spacing before and after subsections
+% \titleformat{\subsection}[runin]
+%   {\normalfont\normalsize\bfseries}{\thesubsection}{1em}{}[]
+% \titlespacing{\subsection}{0pt}{0pt}{0pt} % Adjust the spacing before and after subsections
 
 \titleformat{\subsubsection}[runin]
   {\normalfont\normalsize\bfseries}{\thesubsubsection}{1em}{}[]
