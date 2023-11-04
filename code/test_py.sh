@@ -1,0 +1,1 @@
+for file in $1/*.in; do diff <(python3 $1/$1.py < "$file") "${file%.in}.ans"; done

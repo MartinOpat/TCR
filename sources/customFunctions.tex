@@ -50,3 +50,25 @@
 
 % Other
 \newcommand{\abs}[1]{\left|#1\right|}
+
+
+%*************** Section entries ***************
+% \entry{name}{description}{snippet location}{complexity}{dependencies}
+\newcommand{\entry}[3]{
+	\subsection{#1}
+	#2
+	\ifthenelse{\equal{#3}{}}{}{
+    \immediate\write18{./process_c++_files.sh "#3"}
+    \lstinputlisting{#3}
+  }
+}
+\newcommand{\pyentry}[3]{
+	\subsection{#1}
+	#2
+	\ifthenelse{\equal{#3}{}}{}{\lstinputlisting[language=python]{#3}}
+}
+\newcommand{\otherentry}[3]{
+	\subsection{#1}
+	#2
+	\lstinputlisting[language=]{#3}
+}
