@@ -7,7 +7,7 @@ using namespace std;
 #define ld long double
 #define pl pair<ll, ll>
 #define pi pair<int, int>
-#define vll vector<ll>
+#define vl vector<ll>
 #define vi vector<int>
 #define vvi vector<vi>
 #define vvl vector<vl>

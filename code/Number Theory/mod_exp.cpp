@@ -1,5 +1,4 @@
 #include "header.h"
-
 ll mod_pow(ll base, ll exp, ll mod) {
 	if (mod == 1) return 0;
     if (exp == 0) return 1;
@@ -15,3 +14,4 @@ ll mod_pow(ll base, ll exp, ll mod) {
 
 	return res % mod;
 }
+ 

@@ -1,5 +1,4 @@
 #include "header.h"
-
 ll gcd(ll a, ll b) {
 	if (a == 0) {
 		return b;
