@@ -58,7 +58,7 @@
 	\subsubsection{#1}
 	#2
 	\ifthenelse{\equal{#3}{}}{}{
-    \immediate\write18{./process_c++_files.sh "#3"}
+    % \immediate\write18{./process_c++_files.sh "#3"}
     \lstinputlisting{#3}
   }
 }

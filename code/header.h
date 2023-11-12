@@ -34,6 +34,6 @@ std::ostream& operator<<(std::ostream& o, const Container<T>& container) {
 // int main() {
 // 	ios::sync_with_stdio(false);  // do not use cout + printf
 // 	cin.tie(NULL);
-//     cout << fixed << setprecision(12);
+//  cout << fixed << setprecision(12);
 // 	return 0;
 // }

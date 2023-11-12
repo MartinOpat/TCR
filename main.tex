@@ -3,7 +3,6 @@
 	landscape,
 	%twoside,
 	10pt,
-	article
 ]{article}
 
 % DO NOT REMOVE
@@ -34,10 +33,11 @@
 \tableofcontents
 
 \section{Setup}
-\otherentry{header.h}{}{code/header.h}
-\otherentry{Bash for c++ compile with header.h}{}{compile_c++.sh}
-\otherentry{Bash for run tests c++}{}{code/test_cpp.sh}
-\otherentry{Bash for run tests python}{}{code/test_py.sh}
+\otherentry{header.h}{~}{code/header.h}
+\otherentry{Bash for c++ compile with header.h}{~}{compile_c++.sh}
+\otherentry{Bash for run tests c++}{~}{code/test_cpp.sh}
+\otherentry{Bash for run tests python}{~}{code/test_py.sh}
+\entry{Auxiliary helper stuff}{~}{code/auxiliary.cpp}
 
 \section{Python}
 \subsection{Graphs}
@@ -54,12 +54,19 @@
 
 \section{C++}
 \subsection{Graphs}
-    \entry{BFS}{}{code/Graphs/bfs_filtered.cpp}
+    \entry{BFS}{~}{code/Graphs/bfs_filtered.cpp}
+	\entry{Hungarian algorithm}{~}{code/Graphs/hungarian.cpp}
 
 \subsection{Dynamic Programming}
 \subsection{Trees}
 \subsection{Number Theory}
+	\entry{Modular exponentiation}{Or use pow() in python}{code/Number Theory/mod_exp.cpp}
+	\entry{GCD}{Or use math.gcd() in python}{code/Number Theory/gcd.cpp}
+	\entry{Sieve of Eratosthenes}{~}{code/Number Theory/sieve.cpp}
+
 \subsection{Strings}
+	\entry{Aho-Corasick algorithm}{Also can be used as Knuth-Morris-Pratt algorithm}{code/Strings/aho_corasick.cpp}
+
 \subsection{Geometry}
 \subsection{Combinatorics}
 \subsection{Other Data Structures}
