@@ -1,5 +1,7 @@
 #include "header.h"
-void warshall(vvl g) {  // g[i][j] = infty if not path from i to j
+// g[i][j] = infty if not path from i to j
+// if g[i][i] < 0, i is contained in a negative cycle
+void warshall(vvl g) {
     for (int i=0; i<g.size(); ++i) { 
         for (int j=0; j<g.size(); ++j) { 
             for (int k=0; k<g.size(); ++k) {
