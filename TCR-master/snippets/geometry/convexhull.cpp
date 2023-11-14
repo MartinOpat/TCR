@@ -35,5 +35,5 @@ struct ConvexHull {			// O(n lg n) monotone chain.
 // Example: furthest pair of points. Now set ans = 0LL and call
 // ConvexHull(pts).rotating_calipers<ll, update>(ans);
 void update(const P &p1, const P &p2, const P &o, ll &ans) {
-	ans = max(ans, max((p1-o).lensq(), (p2-o).lensq()));
+	ans = max(ans, (ll)max((p1-o).lensq(), (p2-o).lensq()));
 }
