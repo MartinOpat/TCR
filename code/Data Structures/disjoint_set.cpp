@@ -17,9 +17,7 @@ class DisjointSet {
 
         // O(log n)
         T find_set(T x) {
-            if (x == parent[x]) {
-                return x;
-            }
+            if (x == parent[x]) return x;
             return parent[x] = find_set(parent[x]);
         }
 
@@ -37,8 +35,6 @@ class DisjointSet {
             }
 
             parent[y] = x;
-            if (rank[x] == rank[y]) {
-                rank[x]++;
-            }
+            if (rank[x] == rank[y]) rank[x]++;
         }
 };
