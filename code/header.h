@@ -14,7 +14,8 @@ using namespace std;
 #define vpl vector<pl>
 #define vpi vector<pi>
 #define vld vector<ld>
-#define in(el, cont) (cont.find(el) != cont.end())
+#define in_fast(el, cont) (cont.find(el) != cont.end())
+#define in(el, cont) (find(cont.begin(), cont.end(), el) != cont.end())
 
 constexpr int INF  = 2000000010;
 constexpr ll LLINF = 9000000000000000010LL;
