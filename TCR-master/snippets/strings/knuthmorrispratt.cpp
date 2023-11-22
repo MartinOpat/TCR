@@ -9,7 +9,6 @@ void compute_prefix_function(string &w, vi &pi) {
 		pi[i] = k;
 	}
 }
-
 void knuth_morris_pratt(string &s, string &w) {
 	int q = -1;
 	vi pi;

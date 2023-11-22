@@ -83,7 +83,8 @@ TCR
 	\entry{nCk \% prime}{~}{code/Number Theory/nCk_mod_prime.cpp}
 	
 \subsection{Strings}
-\entry{Aho-Corasick algorithm}{Also can be used as Knuth-Morris-Pratt algorithm}{code/Strings/aho_corasick.cpp}
+	\entry{Aho-Corasick algorithm}{Also can be used as Knuth-Morris-Pratt algorithm}{code/Strings/aho_corasick.cpp}
+	\entry{KMP}{~}{code/Strings/kmp.cpp}
 
 \subsection{Geometry}
 	\entry{essentials.cpp}{~}{code/Geometry/essentials.cpp}
@@ -95,16 +96,21 @@ TCR
 	\entry{Fenwick tree}{(i.e. BIT) eff. update + prefix sum calc.}{code/Data Structures/fenwick_tree.cpp}
 
 \section{Other Mathematics}
-	\entry{Euler's Totient Fucntion}
-	{
-		$n = p_1^{k_1-1}\cdot(p_1-1) \cdot \hdots \cdot p_r^{k_r-1}\cdot(p_r-1)$, where $p_1^{k_1} \cdot \hdots \cdot p_r^{k_r}$ is the prime factorization of $n$.
-		Formulas: $a^{\varphi (n)} \equiv 1 \mod n$, $a$ and $n$ are coprimes, $\forall e > \log_2 m:~ n^e \mod m = n^{\Phi(m) + e \mod \Phi(m)} \mod m$
-	}
-	{code/Other Math/euler_totient_func.cpp}
-	\subsubsection*{Fermat's little theorem}
-	$a^p \equiv a \mod p$
-	\subsubsection*{Subfactorial}
-	$!n = n! \sum_{i=0}^{n} \frac{(-1)^i}{i!}$, 
-	$!(0) = 1, ~ !n = n \cdot !(n-1) + (-1)^n$
+	\subsection{Helpful functions}
+		\entry{Euler's Totient Fucntion}
+		{
+			$n = p_1^{k_1-1}\cdot(p_1-1) \cdot \hdots \cdot p_r^{k_r-1}\cdot(p_r-1)$, where $p_1^{k_1} \cdot \hdots \cdot p_r^{k_r}$ is the prime factorization of $n$.
+			Formulas: $a^{\varphi (n)} \equiv 1 \mod n$, $a$ and $n$ are coprimes, $\forall e > \log_2 m:~ n^e \mod m = n^{\Phi(m) + e \mod \Phi(m)} \mod m$
+		}
+		{code/Other Math/euler_totient_func.cpp}
+
+	\subsection{Theorems and definitions}
+		\subsubsection{Fermat's little theorem}
+		$a^p \equiv a \mod p$
+		\subsubsection{Subfactorial}
+		$!n = n! \sum_{i=0}^{n} \frac{(-1)^i}{i!}$, 
+		$!(0) = 1, ~ !n = n \cdot !(n-1) + (-1)^n$
+		\subsubsection{Least common multiple}
+		$\text{lcm}(a, b) = a \cdot b / \text{gcd}(a, b)$
 
 \end{document}
