@@ -60,8 +60,6 @@ TCR
 \subsection{Other Data Structures}
 	\pyentry{Segment Tree}{~}{code/Data Structures/segment_tree.py}
 
-\subsection{Other Mathematics}
-
 
 
 \section{C++}
@@ -96,6 +94,14 @@ TCR
 	\entry{Disjoint set}{(i.e. union-find)}{code/Data Structures/disjoint_set.cpp}
 	\entry{Fenwick tree}{(i.e. BIT) eff. update + prefix sum calc.}{code/Data Structures/fenwick_tree.cpp}
 
-\subsection{Other Mathematics}
+\section{Other Mathematics}
+	\entry{Euler's Totient Fucntion}
+	{
+		$n = p_1^{k_1-1}\cdot(p_1-1) \cdot \hdots \cdot p_r^{k_r-1}\cdot(p_r-1)$, where $p_1^{k_1} \cdot \hdots \cdot p_r^{k_r}$ is the prime factorization of $n$.
+		Formulas: $a^{\varphi (n)} \equiv 1 \mod n$, $a$ and $n$ are coprimes, $\forall e > \log_2 m:~ n^e \mod m = n^{\Phi(m) + e \mod \Phi(m)} \mod m$
+	}
+	{code/Other Math/euler_totient_func.cpp}
+	\subsubsection*{Fermat's little theorem}
+	$a^p \equiv a \mod p$
 
 \end{document}
