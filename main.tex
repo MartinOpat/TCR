@@ -103,9 +103,13 @@ TCR
 		\entry{Euler's Totient Fucntion}
 		{
 			$n = p_1^{k_1-1}\cdot(p_1-1) \cdot \hdots \cdot p_r^{k_r-1}\cdot(p_r-1)$, where $p_1^{k_1} \cdot \hdots \cdot p_r^{k_r}$ is the prime factorization of $n$.
-			Formulas: $a^{\varphi (n)} \equiv 1 \mod n$, $a$ and $n$ are coprimes, $\forall e > \log_2 m:~ n^e \mod m = n^{\Phi(m) + e \mod \Phi(m)} \mod m$
 		}
 		{code/Other Math/euler_totient_func.cpp}
+		\subsubsection*{Formulas}
+			$\Phi(n)$ counts all numbers in ${1,\hdots,n-1}$ coprime to $n$. \\
+			$a^{\varphi (n)} \equiv 1 \mod n$, $a$ and $n$ are coprimes. \\
+			$\forall e > \log_2 m:~ n^e \mod m = n^{\Phi(m) + e \mod \Phi(m)} \mod m$. \\
+			$\text{gcd}(m,n) = 1 \Rightarrow \Phi(m\cdot n) = \Phi(m) \cdot \Phi(n)$. \\
 
 	\subsection{Theorems and definitions}
 		\subsubsection*{Fermat's little theorem}
