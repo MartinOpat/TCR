@@ -1,5 +1,4 @@
 Add bash test case generation
 topo sort
 Successive Shortest Path algorithm
-Add formulas from list of useful equations
-
+Look into stirling numbers of the first kind
