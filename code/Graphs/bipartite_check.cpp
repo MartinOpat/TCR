@@ -1,9 +1,9 @@
-int main()
-{
+#include "header.h"
+int main() {
     int n;
-    vector<vector<int>> adj(n);
+    vvi adj(n);
 
-    vector<int> side(n, -1);    // will have 0's for one side 1's for other side
+    vi side(n, -1);    // will have 0's for one side 1's for other side
     bool is_bipartite = true;   // becomes false if not bipartite
     queue<int> q;
     for (int st = 0; st < n; ++st) {
@@ -20,8 +20,4 @@ int main()
                     } else {
                         is_bipartite &= side[u] != side[v];
                     }
-                }
-            }
-        }
-    }
-}
+}}}}}
