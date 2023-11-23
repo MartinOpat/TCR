@@ -121,7 +121,6 @@ TCR
 			\prod_{i=1}^k \frac{n-i+1}{i}$. This last product may be computed
 		incrementally since any product of $k'$ consecutive values is divisibleby
 		$k'!$.
-
 		Basic identities: The hockeystick identity: $\sum_{k=r}^n \binom{k}{r}
 			= \binom{n+1}{r+1}$
 		or $\sum_{k\leq n}\binom{r+k}{k} = \binom{r+n+1}{n}$.
@@ -130,7 +129,14 @@ TCR
 		For $n, m \geq 0$ and $p$ prime. Write $n, m$ in base $p$, i.e.
 		$n = n_k p^k + \dots + n_1 p + n_0$ and $m = m_k p^k + \dots m_1 p + m_0$. Then
 		by Lucas theorem we have $\binom{n}{m} \equiv \prod_{i=0}^k \binom{n_i}{m_i}
-			\mod p$, with the convention that $n_i < m_i \implies \binom{n_i}{m_i} =0$.
+		\mod p$, with the convention that $n_i < m_i \implies \binom{n_i}{m_i} =0$.
+
+		\subsubsection*{Fibonacci}
+		$\sum_{0 \leq k \leq n} \binom{n-k}{k} = F_{n+1}$, 
+		$F_n = \frac{1}{\sqrt{5}} \left(\frac{1+\sqrt{5}}{2}\right)^n - \frac{1}{\sqrt{5}}\left(\frac{1-\sqrt{5}}{2}\right)^n$, \\
+		$\sum_{i=1}^{n} {F_i} = F_{n+2}-1$, $\sum_{i=1}^{n} {F_i^2} = F_{n}F_{n+1}$, \\
+		$\text{gcd}(F_m, F_n) = F_{\text{gcd}(m, n)}$,
+		$\text{gcd}(F_n, F_{n+1}) = \text{gcd}(F_n, F_{n+2}) = 1$
 
 
 \end{document}
