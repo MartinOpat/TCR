@@ -1,13 +1,10 @@
-#include <bits/stdc++.h>
-using namespace std;
-
+#include "header.h"
 int n;
 const int mxN = 2e5 + 5;
-vector<vector<int>> adj(mxN);
+vvi adj(mxN);
 vector<bool> visited;
-vector<int> parent;
+vi parent;
 int cycle_start, cycle_end;
-
 bool dfs(int v, int par) { // passing vertex and its parent vertex
     visited[v] = true;
     for (int u : adj[v]) {
@@ -23,17 +20,13 @@ bool dfs(int v, int par) { // passing vertex and its parent vertex
     }
     return false;
 }
-
 void find_cycle() {
     visited.assign(n, false);
     parent.assign(n, -1);
     cycle_start = -1;
-
     for (int v = 0; v < n; v++) {
-        if (!visited[v] && dfs(v, parent[v]))
-            break;
+        if (!visited[v] && dfs(v, parent[v])) break;
     }
-
     if (cycle_start == -1) {
         cout << "Acyclic" << endl;
     } else {
@@ -42,10 +35,8 @@ void find_cycle() {
         for (int v = cycle_end; v != cycle_start; v = parent[v])
             cycle.push_back(v);
         cycle.push_back(cycle_start);
-
         cout << "Cycle Found: ";
-        for (int v : cycle)
-            cout << v << " ";
+        for (int v : cycle) cout << v << " ";
         cout << endl;
     }
 }

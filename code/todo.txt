@@ -1,3 +1,4 @@
 Add bash test case generation
 topo sort
 Look into stirling numbers of the first kind
+tarjan (or other strongly connected components algo.)
