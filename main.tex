@@ -108,12 +108,29 @@ TCR
 		{code/Other Math/euler_totient_func.cpp}
 
 	\subsection{Theorems and definitions}
-		\subsubsection{Fermat's little theorem}
+		\subsubsection*{Fermat's little theorem}
 		$a^p \equiv a \mod p$
-		\subsubsection{Subfactorial}
+		\subsubsection*{Subfactorial}
 		$!n = n! \sum_{i=0}^{n} \frac{(-1)^i}{i!}$, 
 		$!(0) = 1, ~ !n = n \cdot !(n-1) + (-1)^n$
-		\subsubsection{Least common multiple}
+		\subsubsection*{Least common multiple}
 		$\text{lcm}(a, b) = a \cdot b / \text{gcd}(a, b)$
+
+		\subsubsection*{Binomials and other partitionings}
+		We have $\binom{n}{k} = \binom{n-1}{k}+\binom{n-1}{k-1} =
+			\prod_{i=1}^k \frac{n-i+1}{i}$. This last product may be computed
+		incrementally since any product of $k'$ consecutive values is divisibleby
+		$k'!$.
+
+		Basic identities: The hockeystick identity: $\sum_{k=r}^n \binom{k}{r}
+			= \binom{n+1}{r+1}$
+		or $\sum_{k\leq n}\binom{r+k}{k} = \binom{r+n+1}{n}$.
+		Also $\sum_{k=0}^n \binom{k}{m} = \binom{n+1}{m+1}$.
+
+		For $n, m \geq 0$ and $p$ prime. Write $n, m$ in base $p$, i.e.
+		$n = n_k p^k + \dots + n_1 p + n_0$ and $m = m_k p^k + \dots m_1 p + m_0$. Then
+		by Lucas theorem we have $\binom{n}{m} \equiv \prod_{i=0}^k \binom{n_i}{m_i}
+			\mod p$, with the convention that $n_i < m_i \implies \binom{n_i}{m_i} =0$.
+
 
 \end{document}
