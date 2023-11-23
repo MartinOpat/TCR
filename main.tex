@@ -135,12 +135,17 @@ TCR
 		by Lucas theorem we have $\binom{n}{m} \equiv \prod_{i=0}^k \binom{n_i}{m_i}
 		\mod p$, with the convention that $n_i < m_i \implies \binom{n_i}{m_i} =0$.
 
-		\subsubsection*{Fibonacci}
-		$\sum_{0 \leq k \leq n} \binom{n-k}{k} = F_{n+1}$, 
+		\subsubsection*{Fibonacci} (See also number theory section) \\
+ 		$\sum_{0 \leq k \leq n} \binom{n-k}{k} = F_{n+1}$, 
 		$F_n = \frac{1}{\sqrt{5}} \left(\frac{1+\sqrt{5}}{2}\right)^n - \frac{1}{\sqrt{5}}\left(\frac{1-\sqrt{5}}{2}\right)^n$, \\
 		$\sum_{i=1}^{n} {F_i} = F_{n+2}-1$, $\sum_{i=1}^{n} {F_i^2} = F_{n}F_{n+1}$, \\
 		$\text{gcd}(F_m, F_n) = F_{\text{gcd}(m, n)}$,
 		$\text{gcd}(F_n, F_{n+1}) = \text{gcd}(F_n, F_{n+2}) = 1$
+
+		\subsubsection*{Bit stuff} $a + b = a \oplus b + 2(a\&b) = a | b + a\&b$. \\
+		kth bit is set in $x$ iff $x \mod 2^{k-1} \geq 2^k$, or iff $x \mod 2^{k-1}  - x \mod 2^k \neq 0~(\text{i.e.} = 2^k)$ It comes handy when you need to look at the bits of the numbers which are pair sums or subset sums etc. \\
+		$n \mod 2^i = n\&(2^i-1)$. \\
+		$\forall k:~ 1 \oplus 2 \oplus \hdots \oplus (4k-1) = 0$
 
 
 \end{document}
