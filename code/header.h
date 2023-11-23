@@ -1,4 +1,4 @@
-#pragma once
+#pragma once  // Delete this when copying this file
 #include <bits/stdc++.h>
 using namespace std;
 
