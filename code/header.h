@@ -6,9 +6,9 @@ using namespace std;
 #define ull unsigned ll
 #define ld long double
 #define pl pair<ll, ll>
-#define pi pair<int, int>
+#define pi pair<int, int>  // use pl where possible/necessary
 #define vl vector<ll>
-#define vi vector<int>
+#define vi vector<int>  // change to vl where possible/necessary
 #define vb vector<bool>
 #define vvi vector<vi>
 #define vvl vector<vl>
