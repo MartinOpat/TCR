@@ -147,34 +147,33 @@
 
 	\subsection{Theorems and definitions}
 		\subsubsection*{Fermat's little theorem}
-		$a^p \equiv a \mod p$
+		$$a^p \equiv a \mod p$$
 		\subsubsection*{Subfactorial}
-		$!n = n! \sum_{i=0}^{n} \frac{(-1)^i}{i!}$, 
-		$!(0) = 1, ~ !n = n \cdot !(n-1) + (-1)^n$
-		\subsubsection*{Least common multiple}
-		$\text{lcm}(a, b) = a \cdot b / \text{gcd}(a, b)$
+		$$!n = n! \sum_{i=0}^{n} \frac{(-1)^i}{i!}$$
+		$$!(0) = 1, ~ !n = n \cdot !(n-1) + (-1)^n$$
 
 		\subsubsection*{Binomials and other partitionings}
-		We have $\binom{n}{k} = \binom{n-1}{k}+\binom{n-1}{k-1} =
-			\prod_{i=1}^k \frac{n-i+1}{i}$. This last product may be computed
+		$$\binom{n}{k} = \binom{n-1}{k}+\binom{n-1}{k-1} =
+			\prod_{i=1}^k \frac{n-i+1}{i}$$ This last product may be computed
 		incrementally since any product of $k'$ consecutive values is divisibleby
-		$k'!$.
-		Basic identities: The hockeystick identity: $\sum_{k=r}^n \binom{k}{r}
-			= \binom{n+1}{r+1}$
-		or $\sum_{k\leq n}\binom{r+k}{k} = \binom{r+n+1}{n}$.
-		Also $\sum_{k=0}^n \binom{k}{m} = \binom{n+1}{m+1}$.
+		$k'!$. \\
+		Basic identities: The hockeystick identity: \\
+		 $$\sum_{k=r}^n \binom{k}{r}
+			= \binom{n+1}{r+1}$$
+		or $$\sum_{k\leq n}\binom{r+k}{k} = \binom{r+n+1}{n}$$
+		Also $$\sum_{k=0}^n \binom{k}{m} = \binom{n+1}{m+1}$$
 
-		For $n, m \geq 0$ and $p$ prime. Write $n, m$ in base $p$, i.e.
+		For $n, m \geq 0$ and $p$ prime: write $n, m$ in base $p$, i.e.
 		$n = n_k p^k + \dots + n_1 p + n_0$ and $m = m_k p^k + \dots m_1 p + m_0$. Then
 		by Lucas theorem we have $\binom{n}{m} \equiv \prod_{i=0}^k \binom{n_i}{m_i}
 		\mod p$, with the convention that $n_i < m_i \implies \binom{n_i}{m_i} =0$.
 
 		\subsubsection*{Fibonacci} (See also number theory section) \\
- 		$\sum_{0 \leq k \leq n} \binom{n-k}{k} = F_{n+1}$, 
-		$F_n = \frac{1}{\sqrt{5}} \left(\frac{1+\sqrt{5}}{2}\right)^n - \frac{1}{\sqrt{5}}\left(\frac{1-\sqrt{5}}{2}\right)^n$, \\
-		$\sum_{i=1}^{n} {F_i} = F_{n+2}-1$, $\sum_{i=1}^{n} {F_i^2} = F_{n}F_{n+1}$, \\
-		$\text{gcd}(F_m, F_n) = F_{\text{gcd}(m, n)}$,
-		$\text{gcd}(F_n, F_{n+1}) = \text{gcd}(F_n, F_{n+2}) = 1$
+ 		$$\sum_{0 \leq k \leq n} \binom{n-k}{k} = F_{n+1}$$ 
+		$$F_n = \frac{1}{\sqrt{5}} \left(\frac{1+\sqrt{5}}{2}\right)^n - \frac{1}{\sqrt{5}}\left(\frac{1-\sqrt{5}}{2}\right)^n$$
+		$\sum_{i=1}^{n} {F_i} = F_{n+2}-1$, $\sum_{i=1}^{n} {F_i^2} = F_{n}F_{n+1}$
+		$$\text{gcd}(F_m, F_n) = F_{\text{gcd}(m, n)}$$
+		$$\text{gcd}(F_n, F_{n+1}) = \text{gcd}(F_n, F_{n+2}) = 1$$
 
 		\subsubsection*{Bit stuff} $a + b = a \oplus b + 2(a\&b) = a | b + a\&b$. \\
 		kth bit is set in $x$ iff $x \mod 2^{k-1} \geq 2^k$, or iff $x \mod 2^{k-1}  - x \mod 2^k \neq 0~(\text{i.e.} = 2^k)$ It comes handy when you need to look at the bits of the numbers which are pair sums or subset sums etc. \\
