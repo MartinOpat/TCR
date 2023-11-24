@@ -1,10 +1,9 @@
+#include "header.h"
 int n; // number of nodes
-vector<vector<int>> adj; // adjacency list of graph
-
+vvi adj; // adjacency list of graph
 vector<bool> visited;
-vector<int> tin, low;
+vi tin, low;
 int timer;
-
 void dfs(int v, int p = -1) {
     visited[v] = true;
     tin[v] = low[v] = timer++;
@@ -20,14 +19,12 @@ void dfs(int v, int p = -1) {
         }
     }
 }
-
 void find_bridges() {
     timer = 0;
     visited.assign(n, false);
     tin.assign(n, -1);
     low.assign(n, -1);
     for (int i = 0; i < n; ++i) {
-        if (!visited[i])
-            dfs(i);
+        if (!visited[i]) dfs(i);
     }
 }
