@@ -1,5 +1,5 @@
-#include "../header.h"
-#include "elementary-nt.cpp"
+#include "header.h"
+#include "../Number Theory/elementary.cpp"
 template<ll p,ll w> // prime, primitive root
 struct Field { using T = Field; ll x; Field(ll x=0) : x{x} {}
 	T operator+(T r) const { return {(x+r.x)%p}; }
