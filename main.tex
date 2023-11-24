@@ -124,6 +124,7 @@
 	$$a_n = \sum_{i=0}^{k-1} c_i a_{n-i-1}$$
 	this code computes $a_n$ in $O(k \log k \log n)$ time.}{code/Other/lin_recursion.cpp}
 	\entry{Convolution}{Precise up to 9e15}{code/Other/convo.cpp}
+	\entry{Partitions of $n$}{Finds all possible partitions of a number}{code/Other/all_partitions.cpp}
 
 \subsection{Other Data Structures}
 	\entry{Disjoint set}{(i.e. union-find)}{code/Data Structures/disjoint_set.cpp}
@@ -146,6 +147,8 @@
 			$\text{gcd}(m,n) = 1 \Rightarrow \Phi(m\cdot n) = \Phi(m) \cdot \Phi(n)$. \\
 
 		\entry{Pascal's trinagle}{$\binom{n}{k}$ is $k$-th element in the $n$-th row, indexing both from 0}{code/Other Math/pascal_triangle.cpp}
+
+	\newpage
 	\subsection{Theorems and definitions}
 		\subsubsection*{Fermat's little theorem}
 		$$a^p \equiv a \mod p$$
@@ -182,13 +185,16 @@
 		$n \mod 2^i = n\&(2^i-1)$. \\
 		$\forall k:~ 1 \oplus 2 \oplus \hdots \oplus (4k-1) = 0$
 
-		\subsubsection*{Stirling's numbers} First kind: $S_1(n, k)$ count permutations on $n$ items
+		\subsubsection*{Stirling's numbers} \textbf{First kind:} $S_1(n, k)$ count permutations on $n$ items
 		with $k$ cycles. $S_1(n, k) = S_1(n-1, k-1) + (n-1)S_1(n-1, k)$ with
-		$S_1(0, 0) = 1$. Note $\sum_{k=0}^n S_1(n, k)x^k = x(x+1)\dots(x+n-1)$.\\
-		Second kind: $S_2(n, k)$ count partitions of $n$
+		$S_1(0, 0) = 1$. Note:
+		$$\sum_{k=0}^n S_1(n, k)x^k = x(x+1)\dots(x+n-1)$$
+		$$ \sum_{k=0}^n S_1(n, k) = n! $$
+		\textbf{Second kind:} $S_2(n, k)$ count partitions of $n$
 		distinct elements into exactly $k$ non-empty groups.
-		$S_2(n, k) = S_2(n-1, k-1) + kS_2(n-1, k)$ with $S_2(n, 1) = S_2(n, n) = 1$ and
-		$S_2(n, k) = \frac{1}{k!}\sum_{i=0}^k (-1)^{k-i}\binom{k}{i}i^n$
+		$$ S_2(n, k) = S_2(n-1, k-1) + kS_2(n-1, k)$$
+		$$S_2(n, 1) = S_2(n, n) = 1$$
+		$$ S_2(n, k) = \frac{1}{k!}\sum_{i=0}^k (-1)^{k-i}\binom{k}{i}i^n $$
 
 		\subsection{Geometry Formulas}
 		\begin{equation*}
@@ -220,7 +226,7 @@
 			A = \frac{1}{2} \sum_{i = 0}^{n - 1} (x_i y_{i+1} - x_{i+1} y_i) = \textrm{polygon area}
 		\end{equation*}
 
-		\subsection*{Inclusion-Exclusion}
+		\subsubsection*{Inclusion-Exclusion}
 		For appropriate $f$ compute $\sum_{S\subseteq T} (-1)^{|T\setminus S|} f(S)$,
 		or if only the size of $S$ matters, $\sum_{s=0}^n (-1)^{n-s} \binom{n}{s}f(s)$.
 		In some contexts we might use Stirling numbers, not binomial coefficients!
@@ -236,7 +242,7 @@
 				number of a graph in $O^*(2^n)$ time.
 		\end{enumerate}
 
-		\subsection*{Burnside's lemma}
+		\subsubsection*{Burnside's lemma}
 		Given a group $G$ acting on a set $X$, the number of elements in $X$ up to
 		symmetry is $$\frac{1}{|G|}\sum_{g\in G} |X^g|$$ with $X^g$ the elements of
 		$X$ invariant under $g$. For example, if $f(n)$ counts ``configurations''
@@ -266,6 +272,25 @@
 		permutation on $X$. Note we get the original formula by setting all $t_i=1$.
 		Here $Z$ is the cycle index. Note: you can cleverly deal with even/odd sizes
 		by setting some $t_i$ to $-1$.
+		
+		\subsubsection*{Lucas Theorem}
+		If $p$ is prime, then:
+		$$ \frac{p^a}{k} \equiv 0 (\mod p) $$
+		Thus for non-negative integers $m = m_kp^k + \hdots + m_1 p + m_0$ and $n = n_k p^k + \hdots + n_1p + n_0$:
+		$$ \frac{m}{n} =  \Pi_{i=0}^{k} \frac{m_i}{n_i} \mod p $$ Note: The fraction's mean integer division.
+		
 
+		\subsubsection*{Catalan Numbers} - Number of correct bracket sequence consisting of $n$ opening and $n$
+		closing brackets. \\
+		The number of ways to completely parenthesize $n+1$ factors. \\
+		The number of triangulations of a convex polygon with $n+2$
+		sides (i.e. the number of partitions of polygon into disjoint triangles by using the diagonals). \\
+		The number of ways to connect the $2n$
+		points on a circle to form n disjoint i.e. non-intersecting chords.
+		$$ C_n = \frac{1}{n+1} \binom{2n}{n}$$
+		$$ C_0 = 1,~C_1 = 1, ~C_n = \sum_{k=0}^{n-1}C_k C_{n-1-k}  $$
+
+		\subsubsection*{Narayana numbers} The number of expressions containing n pairs of parentheses, which are correctly matched and which contain k distinct nestings. 
+		$$ N(n,k) = \frac{1}{n} \frac{n}{k} \frac{n}{k-1} $$
 
 \end{document}
