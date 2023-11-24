@@ -9,11 +9,13 @@ using namespace std;
 #define pi pair<int, int>
 #define vl vector<ll>
 #define vi vector<int>
+#define vb vector<bool>
 #define vvi vector<vi>
 #define vvl vector<vl>
 #define vpl vector<pl>
 #define vpi vector<pi>
 #define vld vector<ld>
+#define vvpi vector<vpi>
 #define in_fast(el, cont) (cont.find(el) != cont.end())
 #define in(el, cont) (find(cont.begin(), cont.end(), el) != cont.end())
 

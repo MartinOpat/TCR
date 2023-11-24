@@ -1,6 +1,5 @@
 #include "../header.h"
 #include "../Graphs/tarjan.cpp"
-#define vb vector<bool>
 struct TwoSAT {
 	int n;
 	vvi imp; // implication graph
