@@ -145,6 +145,7 @@
 			$\forall e > \log_2 m:~ n^e \mod m = n^{\Phi(m) + e \mod \Phi(m)} \mod m$. \\
 			$\text{gcd}(m,n) = 1 \Rightarrow \Phi(m\cdot n) = \Phi(m) \cdot \Phi(n)$. \\
 
+		\entry{Pascal's trinagle}{$\binom{n}{k}$ is $k$-th element in the $n$-th row, indexing both from 0}{code/Other Math/pascal_triangle.cpp}
 	\subsection{Theorems and definitions}
 		\subsubsection*{Fermat's little theorem}
 		$$a^p \equiv a \mod p$$
@@ -162,6 +163,7 @@
 			= \binom{n+1}{r+1}$$
 		or $$\sum_{k\leq n}\binom{r+k}{k} = \binom{r+n+1}{n}$$
 		Also $$\sum_{k=0}^n \binom{k}{m} = \binom{n+1}{m+1}$$
+		$$\sum_{i=0}^{n} \binom{n}{i} = 2^n$$
 
 		For $n, m \geq 0$ and $p$ prime: write $n, m$ in base $p$, i.e.
 		$n = n_k p^k + \dots + n_1 p + n_0$ and $m = m_k p^k + \dots m_1 p + m_0$. Then
