@@ -98,11 +98,13 @@
 	\entry{nCk \% prime}{~}{code/Number Theory/nCk_mod_prime.cpp}
 	
 \subsection{Strings}
-	\entry{Aho-Corasick algorithm}{Also can be used as Knuth-Morris-Pratt algorithm}{code/Strings/aho_corasick.cpp}
+	\entry{Z alg.}{KMP alternative}{code/Strings/z.cpp}
 	\entry{KMP}{~}{code/Strings/kmp.cpp}
+	\entry{Aho-Corasick algorithm}{Also can be used as Knuth-Morris-Pratt algorithm}{code/Strings/aho_corasick.cpp}
 
 \subsection{Geometry}
 	\entry{essentials.cpp}{~}{code/Geometry/essentials.cpp}
+	\entry{Two segs. itersec.}{~}{code/Geometry/intersec.cpp}
 	\entry{Convex Hull}{~}{code/Geometry/convex_hull.cpp}
 
 \subsection{Other Algorithms}
@@ -173,6 +175,36 @@
 		distinct elements into exactly $k$ non-empty groups.
 		$S_2(n, k) = S_2(n-1, k-1) + kS_2(n-1, k)$ with $S_2(n, 1) = S_2(n, n) = 1$ and
 		$S_2(n, k) = \frac{1}{k!}\sum_{i=0}^k (-1)^{k-i}\binom{k}{i}i^n$
+
+		\subsection{Geometry Formulas}
+		\begin{equation*}
+			[ABC]
+			= rs
+			= \frac 12 ab\sin\gamma
+			= \frac{abc}{4R}
+			= \sqrt{s(s-a)(s-b)(s-c)}
+			= \frac 12\left| (B-A, C-A)^T \right|
+		\end{equation*}
+
+		\begin{align*}
+			s &= \frac {a+b+c}2 & 2R &=\frac{a}{\sin \alpha}\\
+			\textrm{cosine rule:}&&  c^2 &= a^2 + b^2 - 2ab\cos \gamma\\
+			\textrm{Euler:}&&  1 + CC &= V - E + F\\
+			\textrm{Pick:}&& \textrm{Area} &= \textrm{interior points}
+			+ \frac{\textrm{boundary points}}2 - 1\\
+			p\cdot q &= |p||q|\cos(\theta) & |p\times q| &= |p||q|\sin(\theta)\\
+		\end{align*}
+
+		Given a non-self-intersecting closed polygon on $n$ vertices, given as $(x_i, y_i)$, its centroid $(C_x, C_y)$ is given as:
+
+		\begin{align*}
+			C_x &= \frac{1}{6A} \sum_{i = 0}^{n - 1} (x_i + x_{i+1}) (x_i y_{i+1} - x_{i+1} y_i), &
+			C_y &= \frac{1}{6A} \sum_{i = 0}^{n - 1} (y_i + y_{i+1}) (x_i y_{i+1} - x_{i+1} y_i)
+		\end{align*}
+
+		\begin{equation*}
+			A = \frac{1}{2} \sum_{i = 0}^{n - 1} (x_i y_{i+1} - x_{i+1} y_i) = \textrm{polygon area}
+		\end{equation*}
 
 
 \end{document}
