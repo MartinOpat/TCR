@@ -36,7 +36,7 @@
 	left=0.8cm,
 	right=0.3cm,
 % Weird top and bottom margins because of fancyhdr package
-	top=0.8cm,
+	top=2cm,
 	bottom=0.3cm,
 	columnsep=1cm,
 % Set margins on even and odd pages equal
@@ -90,3 +90,18 @@
 
 \titleformat{\subsubsection}[runin]
   {\normalfont\normalsize\bfseries}{\thesubsubsection}{1em}{}[]
+
+
+%*************** Headings ***************
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead{}
+\fancyfoot{}
+\setlength{\headsep}{0.4em}
+\setlength{\footskip}{0em}
+
+% one sided
+\fancyhead[L]{\hspace{5em} University of Groningen \phantom{-} \bfseries
+Balloon Addicts}
+\fancyhead[R]{\thepage \hspace{0.5em}}
+\fancyhead[C]{\leftmark, \rightmark}
