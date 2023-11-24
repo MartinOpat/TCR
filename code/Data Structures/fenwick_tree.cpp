@@ -6,7 +6,6 @@ void update(int k, int z) {
     while (k <= maxn) {
         tree[k] += z;
         k += k & (-k);
-        // cout << "k: " << k << endl;
     }
 }
 
