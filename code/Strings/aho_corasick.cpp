@@ -67,3 +67,37 @@ struct AC_FSM {
 int char_to_int(char c) {
 	return cti[c];
 }
+int main() {
+	ll n;
+	string line;
+	while(getline(cin, line)) {
+		stringstream ss(line);
+		ss >> n;
+
+		vector<string> patterns(n);
+		for (auto& p: patterns) getline(cin, p);
+
+		string text;
+		getline(cin, text);
+
+		cti = {}, cti_size = 0;
+		for (auto c: text) {
+			if (not in(c, cti)) {
+				cti[c] = cti_size++;
+			}
+		}
+		for (auto& p: patterns) {
+			for (auto c: p) {
+				if (not in(c, cti)) {
+					cti[c] = cti_size++;
+				}
+			}
+		}
+
+		vvi matches;
+		AC_FSM <128+1, char_to_int> ac_fms(patterns);
+		ac_fms.aho_corasick(text, matches);
+		for (auto& x: matches) cout << x << endl;
+	}
+
+}

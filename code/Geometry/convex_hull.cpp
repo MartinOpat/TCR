@@ -36,3 +36,27 @@ struct ConvexHull {	 // O(n lg n) monotone chain.
 void update(const P &p1, const P &p2, const P &o, ll &ans) {
 	ans = max(ans, (ll)max((p1 - o).lensq(), (p2 - o).lensq()));
 }
+int main() {
+	ios::sync_with_stdio(false);  // do not use cout + printf
+	cin.tie(NULL);
+
+	int n;
+	cin >> n;
+	while (n) {
+		vector<P> ps;
+        int x, y;
+		for (int i = 0; i < n; i++) {
+            cin >> x >> y;
+            ps.push_back({x, y});
+        }
+
+        ConvexHull ch(ps);
+        cout << ch.h.size() << endl;
+        for(auto& p: ch.h) {
+            cout << ps[p].x << " " << ps[p].y << endl;
+        }
+		cin >> n;
+	}
+
+	return 0;
+}
