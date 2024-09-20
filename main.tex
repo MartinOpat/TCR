@@ -19,7 +19,7 @@
 %*************** Table of Contents ***************
 \usepackage[toc]{multitoc}			% multicolumn toc
 \usepackage{tocloft}				% to reduce toc spacing
-\renewcommand*{\multicolumntoc}{2}
+\renewcommand*{\multicolumntoc}{3}
 % reduce section spacing in toc
 \setlength{\cftbeforesecskip}{-1pt}
 \setlength{\cftbeforesubsecskip}{-1.5pt}
@@ -32,6 +32,7 @@
 \setcounter{tocdepth}{3}
 \tableofcontents
 
+\begin{multicols}{3}
 \section{Setup}
 \otherentry{header.h}{~}{code/header.h}
 \otherentry{Bash for c++ compile with header.h}{~}{compile_c++.sh}
@@ -100,7 +101,7 @@
 	\entry{Fibonacci \% prime}{~}{code/Number Theory/fib_mod_prime.cpp}
 	\entry{nCk \% prime}{~}{code/Number Theory/nCk_mod_prime.cpp}
 	\entry{Chin. rem. th.}{~}{code/Number Theory/chinese_rt.cpp}
-	
+
 \subsection{Strings}
 	\entry{Z alg.}{KMP alternative}{code/Strings/z.cpp}
 	\entry{KMP}{~}{code/Strings/kmp.cpp}
@@ -292,5 +293,5 @@
 
 		\subsubsection*{Narayana numbers} The number of expressions containing n pairs of parentheses, which are correctly matched and which contain k distinct nestings. 
 		$$ N(n,k) = \frac{1}{n} \frac{n}{k} \frac{n}{k-1} $$
-
+\end{multicols}
 \end{document}
