@@ -1,9 +1,8 @@
 from collections import deque
 def bfs(g, roots, n):
     q = deque(roots)
-    explored = set(roots)
-    distances = [float("inf")]*n
-    distances[0][0] = 0
+    explored = set()
+    distances = [0 if v in roots else float('inf') for v in range(n)]
 
     while len(q) != 0:
         node = q.popleft()
