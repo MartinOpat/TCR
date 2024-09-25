@@ -54,7 +54,7 @@ bool linear_diophantine(ll a, ll b, ll c, ll &x, ll &y) {
 }
 
 // Description: Tonelli-Shanks algorithm for modular square roots. Finds $x$ s.t. $x^2 = a \pmod p$ ($-x$ gives the other solution). O(\log^2 p) worst case, O(\log p) for most $p$
-ll sqrt(ll a, ll p) {
+ll sqrtmod(ll a, ll p) {
 	a %= p; if (a < 0) a += p;
 	if (a == 0) return 0;
 	assert(powmod(a, (p-1)/2, p) == 1); // else no solution
