@@ -81,15 +81,18 @@
 	\entry{Suc. shortest path}{Calculates max flow, min cost}{code/Graphs/succ_shortest_path.cpp}
 	\entry{Bipartite check}{~}{code/Graphs/bipartite_check.cpp}
 	\entry{Find cycle directed}{~}{code/Graphs/find_cycle_directed.cpp}
-	\entry{Find cycle directed}{~}{code/Graphs/find_cycle_undirected.cpp}
+	\entry{Find cycle undirected}{~}{code/Graphs/find_cycle_undirected.cpp}
 	\entry{Tarjan's SCC}{~}{code/Graphs/tarjan.cpp}
 	\entry{SCC edges}{Prints out the missing edges to make the input digraph strongly connected}{code/Graphs/scc_edges.cpp}   % TODO: Possibly try to find a better algorithm
 	\entry{Find Bridges}{~}{code/Graphs/find_bridges.cpp}
-	\entry{Artic. points}{(i.e. cut off points)}{code/Graphs/find_articulation_points.cpp}
+	\entry{Articulation points}{(i.e. cut off points)}{code/Graphs/find_articulation_points.cpp}
 	\entry{Topological sort}{~}{code/Graphs/topo_sort.cpp}
 	\entry{Bellmann-Ford}{Same as Dijkstra but allows neg. edges}{code/Graphs/bellmannford.cpp}
 	\entry{Ford-Fulkerson}{Basic Max. flow}{code/Graphs/ford-fulk.cpp}
 	\entry{Dinic max flow}{$O(V^2E)$, $O(Ef)$}{code/Graphs/dinic.cpp}
+
+	% TODO: Re-implement this to 100% match our graph implementation
+	\entry{Edmonds-Karp}{Max flow $O(VE^2)$}{code/Graphs/EdmondsKarp.h}
 
 \subsection{Dynamic Programming}
 	\entry{Longest Incr. Subseq.}{~}{code/Dynamic Programming/lis.cpp}
@@ -138,6 +141,13 @@
 	\entry{Fibonacci \% prime}{~}{code/Number Theory/fib_mod_prime.cpp}
 	\entry{nCk \% prime}{~}{code/Number Theory/nCk_mod_prime.cpp}
 	\entry{Chin. rem. th.}{~}{code/Number Theory/chinese_rt.cpp}
+	\subsubsection{Derangements}
+	Permutations of a set such that none of the elements appear in
+	their original position:
+	\begin{gather}
+		!n = (n-1)(!(n-1)+!(n-2)) = \left[\frac{n!}{e}\right] \\
+		!n = 1-e^{-1},~n\rightarrow\infty
+	\end{gather}
 
 \subsection{Strings}
 	\entry{Z alg.}{KMP alternative}{code/Strings/z.cpp}
@@ -163,6 +173,7 @@
 	this code computes $a_n$ in $O(k \log k \log n)$ time.}{code/Other/lin_recursion.cpp}
 	\entry{Convolution}{Precise up to 9e15}{code/Other/convo.cpp}
 	\entry{Partitions of $n$}{Finds all possible partitions of a number}{code/Other/all_partitions.cpp}
+	\entry{Ternary search}{~}{code/Other/TernarySearch.h}
 
 \subsection{Other Data Structures}
 	\entry{Disjoint set}{(i.e. union-find)}{code/Data Structures/disjoint_set.cpp}
