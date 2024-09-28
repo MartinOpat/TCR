@@ -18,21 +18,11 @@ using namespace std;
 #define vvpi vector<vpi>
 #define in_fast(el, cont) (cont.find(el) != cont.end())
 #define in(el, cont) (find(cont.begin(), cont.end(), el) != cont.end())
+#define all(x) x.begin(), x.end()
+#define rall(x) x.rbegin(), x.rend()
 
 constexpr int INF  = 2000000010;
 constexpr ll LLINF = 9000000000000000010LL;
-
-template <typename T, template <typename ELEM, typename ALLOC = std::allocator<ELEM> > class Container>
-std::ostream& operator<<(std::ostream& o, const Container<T>& container) {
-	typename Container<T>::const_iterator beg = container.begin();
-	if (beg != container.end()) {
-		o << *beg++;
-		while (beg != container.end()) {
-			o << " " << *beg++;
-		}
-	}
-	return o;
-}
 
 // int main() {
 // 	ios::sync_with_stdio(false);  // do not use cout + printf
