@@ -1,19 +1,15 @@
-#include "header.h"
-#define maxn 200010
-int t,n,m,tree[maxn],p[maxn];
-
-void update(int k, int z) {
-    while (k <= maxn) {
-        tree[k] += z;
-        k += k & (-k);
+// #include "header.h"
+template < class T >
+struct FenwickTree { // use 1 based indices !!!
+    int n ; vector <T > tree ;
+    FenwickTree ( int n ) : n ( n ) { tree . assign ( n + 1 , 0) ; }
+    T query ( int l , int r ) { return query ( r ) - query ( l - 1) ; }
+    T query ( int r ) {
+        T s = 0;
+        for (; r > 0; r -= ( r & ( - r ) ) ) s += tree [ r ];
+        return s ;
     }
-}
-
-int sum(int k) {
-    int ans = 0;
-    while(k) {
-        ans += tree[k];
-        k -= k & (-k);
+    void update ( int i , T v ) {
+        for (; i <= n ; i += ( i & ( - i ) ) ) tree [ i ] += v ;
     }
-    return ans;
-}
+};
