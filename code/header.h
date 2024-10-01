@@ -16,10 +16,8 @@ using namespace std;
 #define vpi vector<pi>
 #define vld vector<ld>
 #define vvpi vector<vpi>
-#define in_fast(el, cont) (cont.find(el) != cont.end())
-#define in(el, cont) (find(cont.begin(), cont.end(), el) != cont.end())
+#define in(el, cont) (cont.find(el) != cont.end())// sets/maps
 #define all(x) x.begin(), x.end()
-#define rall(x) x.rbegin(), x.rend()
 
 constexpr int INF  = 2000000010;
 constexpr ll LLINF = 9000000000000000010LL;
