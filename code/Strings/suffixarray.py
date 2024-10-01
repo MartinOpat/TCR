@@ -17,7 +17,6 @@ class SA:
           L = [Entry(0, 0) for _ in range(n)]
           self.P = []
           self.P.append([ord(c) for c in s])
-  
           step = 1
           count = 1
   
@@ -43,7 +42,6 @@ class SA:
               step += 1
               count *= 2
   
-          # compute the suffix array from P
           self.sa = [0] * n
           for i in range(n):
               self.sa[self.P[-1][i]] = i

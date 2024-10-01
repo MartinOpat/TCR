@@ -33,9 +33,7 @@ struct Tarjan {
 			if (n[u] == -1) visit(u, com);
 		return C;
 	}
-	// scc is a map of the original vertices of the graph to the vertices
-	// of the SCC graph, scc_graph is its adjacency list.
-	// SCC indices and edges are stored in 'scc' and 'scc_graph'.
+	// scc is a map of the original vertices of the graph to the vertices of the SCC graph, scc_graph is its adjacency list. SCC indices and edges are stored in 'scc' and 'scc_graph'.
 	void scc_collapse(vi &scc, vvi &scc_graph) {
 		find_sccs(scc);
 		scc_graph.assign(C, vi());
@@ -50,7 +48,6 @@ struct Tarjan {
 			}
 		}
 	}
-	// Function to find sources and sinks in the SCC graph
 	// The number of edges needed to be added is max(sources.size(), sinks.())
 	void findSourcesAndSinks(const vvi &scc_graph, vi &sources, vi &sinks) {
 		vi in_degree(C, 0), out_degree(C, 0);

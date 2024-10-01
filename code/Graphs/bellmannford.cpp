@@ -14,15 +14,15 @@ void bellmann_ford_extended(vvpi &e, int source, vi &dist, vb &cyc) {
 		if(!relax) break;
 	}
 	bool ch = true;
-	while (ch) {				// keep going untill no more changes
-		ch = false;				// set dist to -INF when in cycle
+	while (ch) { // keep going untill no more changes
+		ch = false;	// set dist to -INF when in cycle
 		for (int u = 0; u < e.size(); ++u)
 			if (dist[u] == INF) continue;
 			else for (auto &e : e[u])
 				if (dist[e.first] > dist[u] + e.second
 					&& !cyc[e.first]) {
 					dist[e.first] = -INF;
-					ch = true;		//return true for cycle detection only
+					ch = true; //return true for cycles
 					cyc[e.first] = true;
 				}
 	}

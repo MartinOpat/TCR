@@ -1,6 +1,6 @@
 #include "../header.h"
-using C = ld;	// could be long long or long double
-constexpr C EPS = 1e-10;	// change to 0 for C=ll
+using C = ld;	// could be ll or ld
+constexpr C EPS = 1e-10; // change to 0 for C=ll
 struct P {		// may also be used as a 2D vector
 	C x, y;
 	P(C x = 0, C y = 0) : x(x), y(y) {}

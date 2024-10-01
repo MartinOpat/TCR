@@ -1,10 +1,10 @@
 #include "../header.h"
 using T = char;
-using M = map<T,int>;		// or array<T,ALPHABET_SIZE>
-using V = string;			// could be vector<T> as well
+using M = map<T,int>; // or array<T,ALPHABET_SIZE>
+using V = string; // could be vector<T> as well
 using It = V::const_iterator;
 struct Node{
-	It b, e; M edges; int link;		// end is exclusive
+	It b, e; M edges; int link; // end is exclusive
 	Node(It b, It e) : b(b), e(e), link(-1) {}
 	int size() const { return e-b; }
 };
@@ -22,17 +22,17 @@ struct SuffixTree{
 			++remainder; llink = 0;
 			while(remainder){
 				if(len == 0) edge = i;
-				if(t[n].edges[*edge] == 0){			// add new leaf
+				if(t[n].edges[*edge] == 0){
 					t[n].edges[*edge] = add_node(i); link(n);
 				} else {
-					auto x = t[n].edges[*edge];		// neXt node [with edge]
-					if(len >= t[x].size()){			// walk to next node
+					auto x = t[n].edges[*edge];	
+					if(len >= t[x].size()){
 						len -= t[x].size(); edge += t[x].size(); n = x;
 						continue;
 					}
-					if(*(t[x].b + len) == *i){		// walk along edge
+					if(*(t[x].b + len) == *i){
 						++len; link(n); break;
-					}								// split edge
+					}
 					auto split = add_node(t[x].b, t[x].b+len);
 					t[n].edges[*edge] = split;
 					t[x].b += len;
@@ -43,7 +43,7 @@ struct SuffixTree{
 				--remainder;
 				if(n == root && len > 0)
 					--len, edge = i - remainder + 1;
-				else n = t[n].link > 0 ? t[n].link : root;
+				else n = t[n].link > 0? t[n].link: root;
 			}
 		}
 	}

@@ -8,7 +8,6 @@ class DisjointSet {
             this->parent = new T[n];
             this->n = n;
             this->rank = new T[n];
-
             for (T i = 0; i < n; i++) {
                 parent[i] = i;
                 rank[i] = 0;
@@ -27,13 +26,11 @@ class DisjointSet {
             y = this->find_set(y);
 
             if (x == y) return;
-
             if (rank[x] < rank[y]) {
                 T z = x;
                 x = y;
                 y = z;
             }
-
             parent[y] = x;
             if (rank[x] == rank[y]) rank[x]++;
         }

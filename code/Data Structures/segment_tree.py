@@ -1,28 +1,24 @@
-N = 100000  # limit for array size
-tree = [0] * (2 * N)  # Max size of tree
+N = 100000 # arr max size
+tree = [0] * (2 * N) # tre max size
 
-def build(arr, n):  # function to build the tree
-    # insert leaf nodes in tree
+def build(arr, n):
     for i in range(n):
         tree[n + i] = arr[i]
 
-    # build the tree by calculating parents
     for i in range(n - 1, 0, -1):
         tree[i] = tree[i << 1] + tree[i << 1 | 1]
 
-def updateTreeNode(p, value, n):  # function to update a tree node
-    # set value at position p
+def updateTreeNode(p, value, n):
     tree[p + n] = value
     p = p + n
 
-    i = p  # move upward and update parents
+    i = p  # move upward, update parents
     while i > 1:
         tree[i >> 1] = tree[i] + tree[i ^ 1]
         i >>= 1
 
-def query(l, r, n):  # function to get sum on interval [l, r)
+def query(l, r, n):  # sum [l, r)
     res = 0
-    # loop to find the sum in the range
     l += n
     r += n
     while l < r:

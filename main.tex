@@ -45,13 +45,13 @@
 \subsection{Graphs}
 	\pyentry{BFS}{~}{code/Graphs/bfs.py}
 	\pyentry{Dijkstra}{~}{code/Graphs/dijkstra_filtered.py}
-	\pyentry{Topological Sort}{~}{code/Graphs/topological_sort.py}
+	\pyentry{Topological Sort}{topological sorting of a DAG}{code/Graphs/topological_sort.py}
 	\pyentry{Kruskal (UnionFind)}{Min. span. tree}{code/Graphs/kruskal_new.py}
 	\pyentry{Prim}{Min. span. tree - good for dense graphs}{code/Graphs/prim.py}
 	% TODO: If space add longest path
 	
 \subsection{Num. Th. / Comb.}
-	\pyentry{nCk \% prime}{~}{code/Number Theory/nCk_mod_prime.py}
+	\pyentry{nCk \% prime}{p must be prime and k $<$ p}{code/Number Theory/nCk_mod_prime.py}
 	\pyentry{Sieve of E.}{$O(n)$ so actually faster than C++ version, but more memory}{code/Number Theory/better_sieve.py}
 	\pyentry{Modular Inverse}{of a mod b}{code/Number Theory/modinv.py}
 	\pyentry{Chinese rem.}{an x such that $\forall$ y,m: yx = 1 mod m requires all m,m' to be >=1 and coprime}{code/Number Theory/chinese_remainder.py}
@@ -59,25 +59,25 @@
 	\pyentry{Gen. chinese rem.}{~}{code/Number Theory/general_chinese_remainder.py}
 	
 \subsection{Strings}
-	\pyentry{Longest common substr.}{(Consecutive)}{code/Strings/leastcommonsubstring.py}
+	\pyentry{Longest common substr.}{(Consecutive) $O(mn)$ time, $O(m)$ space}{code/Strings/leastcommonsubstring.py}
 	\pyentry{Longest common subseq.}{(Non-consecutive)}{code/Strings/lcs.py}
-	\pyentry{KMP}{~}{code/Strings/kmp.py}
+	\pyentry{KMP}{Return all matching pos. of P in T}{code/Strings/kmp.py}
 	\pyentry{Suffix Array}{~}{code/Strings/suffixarray.py}
 	\pyentry{Longest common pref.}{with the suffix array built we can do, e.g., longest common prefix of x, y with suffixarray where x,y are suffixes of the string used $O(\log n)$}{code/Strings/lcpref.py}
 	\pyentry{Edit distance}{~}{code/Strings/edit_distance.py}
 	\pyentry{Bitstring}{Slower than a set for many elements, but hashable}{code/Strings/bitstring.py}
 
-\subsection{Other Algorithms}
-	\pyentry{Rotate matrix}{~}{code/Other/rotate_matrix.py}
-
 \subsection{Geometry}
 	\pyentry{Convex Hull}{~}{code/Geometry/convexhull.py}
 	\pyentry{Geometry}{~}{code/Geometry/geometry.py}
 
+\subsection{Other Algorithms}
+	\pyentry{Rotate matrix}{~}{code/Other/rotate_matrix.py}
+
 \subsection{Other Data Structures}
 	\pyentry{Segment Tree}{~}{code/Data Structures/segment_tree.py}
 	\pyentry{Trie}{~}{code/Data Structures/trie.py}
-	\pyentry{RedBlack tree}{~}{code/Data Structures/llrbst.py}  % TODO: This might be too long so possibly just remove and use cpp
+	% \pyentry{RedBlack tree}{~}{code/Data Structures/llrbst.py}  % TODO: too long so just use cpp
 
 
 
@@ -87,8 +87,8 @@
 	\entry{DFS}{Cycle detection / removal}{code/Graphs/dfs.cpp}
 	\entry{Dijkstra}{~}{code/Graphs/dijkstra_filtered.cpp}
 	\entry{Floyd-Warshall}{~}{code/Graphs/warshall.cpp}
-	\entry{Kruskal}{Minimum spanning tree of undirected weighted graph}{code/Graphs/kruskal.cpp}
-	\entry{Hungarian algorithm}{~}{code/Graphs/hungarian.cpp}
+	\entry{Kruskal}{Minimum spanning tree of undirected weighted graph. $O(E \log E)$}{code/Graphs/kruskal.cpp}
+	\entry{Hungarian algorithm}{Given J jobs and W workers (J $<=$ W), computes the minimum cost to assign each prefix of jobs to distinct workers.}{code/Graphs/hungarian.cpp}
 	\entry{Suc. shortest path}{Calculates max flow, min cost}{code/Graphs/succ_shortest_path.cpp}
 	\entry{Bipartite check}{~}{code/Graphs/bipartite_check.cpp}
 	\entry{Find cycle directed}{~}{code/Graphs/find_cycle_directed.cpp}
@@ -103,26 +103,26 @@
 	\entry{Dinic max flow}{$O(V^2E)$, $O(Ef)$}{code/Graphs/dinic.cpp}
 
 	% TODO: Re-implement this to 100% match our graph implementation
-	\entry{Edmonds-Karp}{Max flow $O(VE^2)$}{code/Graphs/EdmondsKarp.h}
+	\entry{Edmonds-Karp}{(Max) flow algorithm with time $O(VE^2)$. To get edge flow values, compare capacities before and after, and take the positive values only.}{code/Graphs/EdmondsKarp.h}
 
 \subsection{Dynamic Programming}
 	\entry{Longest Incr. Subseq.}{~}{code/Dynamic Programming/lis.cpp}
-	\entry{0-1 Knapsack}{~}{code/Dynamic Programming/0-1_knapsack.cpp}
-	\entry{Coin change}{Number of coins required to achieve a given value}{code/Dynamic Programming/coin_change.cpp}
+	\entry{0-1 Knapsack}{Given a number of coins, calculate all possible distinct sums}{code/Dynamic Programming/0-1_knapsack.cpp}
+	\entry{Coin change}{Total distinct ways to make sum using $n$ coins of different vals}{code/Dynamic Programming/coin_change.cpp}
 
-\subsection{Trees}
-	\entry{Tree diameter}{~}{code/Graphs/tree_diameter.cpp}
-	\entry{Tree Node Count}{~}{code/Graphs/tree_node_count.cpp}
+% \subsection{Trees}
+	% \entry{Tree diameter}{~}{code/Graphs/tree_diameter.cpp}
+	% \entry{Tree Node Count}{~}{code/Graphs/tree_node_count.cpp}
 
 \subsection{Numerical}
 	\entry{Template (for this section)}{~}{code/Numerical/template.cpp}
 	  \entry{Polynomial}{~}{code/Numerical/Polynomial.h}
-	  \entry{Poly Roots}{~}{code/Numerical/PolyRoots.h}
+	  \entry{Poly Roots}{Finds the real roots to a polynomial.$O(n^2 \log(1/\epsilon))$}{code/Numerical/PolyRoots.h}
 	
-	  \entry{Golden Section Search}{~}{code/Numerical/GoldenSectionSearch.h}
-	  \entry{Hill Climbing}{~}{code/Numerical/HillClimbing.h}
-	  \entry{Integration}{~}{code/Numerical/Integrate.h}
-	  \entry{Integration Adaptive}{~}{code/Numerical/IntegrateAdaptive.h}
+	  \entry{Golden Section Search}{Finds the argument minimizing the function $f$ in the interval $[a,b]$ assuming $f$ is unimodal on the interval, i.e. has only one local minimum and no local maximum. The maximum error in the result is $eps$. Works equally well for maximization with a small change in the code. See TernarySearch.h in the Various chapter for a discrete version. $O(\log((b-a) / \epsilon))$}{code/Numerical/GoldenSectionSearch.h}
+	  \entry{Hill Climbing}{Poor man's optimization for unimodal functions.}{code/Numerical/HillClimbing.h}
+	  \entry{Integration}{Simple integration of a function over an interval using Simpson's rule. The error should be proportional to $h^4$, although in practice you will want to verify that the result is stable to desired precision when epsilon changes.}{code/Numerical/Integrate.h}
+	  \entry{Integration Adaptive}{Fast integration using an adaptive Simpson's rule.}{code/Numerical/IntegrateAdaptive.h}
 
 	  % TODO: Add if space
 	% \section{Matrices}
@@ -151,14 +151,14 @@
 	\entry{Sieve of Eratosthenes}{~}{code/Number Theory/sieve.cpp}
 	\entry{Fibonacci \% prime}{~}{code/Number Theory/fib_mod_prime.cpp}
 	\entry{nCk \% prime}{~}{code/Number Theory/nCk_mod_prime.cpp}
-	\entry{Chin. rem. th.}{~}{code/Number Theory/chinese_rt.cpp}
+	% \entry{Chin. rem. th.}{~}{code/Number Theory/chinese_rt.cpp}
 
 \subsection{Strings}
-	\entry{Z alg.}{KMP alternative}{code/Strings/z.cpp}
+	\entry{Z alg.}{KMP alternative (same complexities)}{code/Strings/z.cpp}
 	\entry{KMP}{~}{code/Strings/kmp.cpp}
 	\entry{Aho-Corasick}{Also can be used as Knuth-Morris-Pratt algorithm}{code/Strings/aho_corasick.cpp}
 	\entry{Long. palin. subs}{Manacher - $O(n)$}{code/Strings/manacher.cpp}
-	\entry{Bitstring}{Slower than an unordered set for many elements, but hashable}{code/Strings/bitstring.cpp}
+	\entry{Bitstring}{Slower than an unordered set (for many elements), but hashable}{code/Strings/bitstring.cpp}
 
 \subsection{Geometry}
 	\entry{essentials.cpp}{~}{code/Geometry/essentials.cpp}
@@ -178,7 +178,7 @@
 	this code computes $a_n$ in $O(k \log k \log n)$ time.}{code/Other/lin_recursion.cpp}
 	\entry{Convolution}{Precise up to 9e15}{code/Other/convo.cpp}
 	\entry{Partitions of $n$}{Finds all possible partitions of a number}{code/Other/all_partitions.cpp}
-	\entry{Ternary search}{~}{code/Other/TernarySearch.h}
+	\entry{Ternary search}{Find the smallest i in $[a,b]$ that maximizes $f(i)$, assuming that $f(a) < \dots < f(i) \ge \dots \ge f(b)$. To reverse which of the sides allows non-strict inequalities, change the $<$ marked with (A) to $<=$, and reverse the loop at (B). To minimize $f$, change it to $>$, also at (B). $O(\log(b-a))$}{code/Other/TernarySearch.h}
 
 \subsection{Other Data Structures}
 	\entry{Disjoint set}{(i.e. union-find)}{code/Data Structures/disjoint_set.cpp}

@@ -1,6 +1,5 @@
 #include "header.h"
 #define V 6  // Num. of vertices in given graph
-
 /* Returns true if there is a path from source 's' to sink
 't' in residual graph. Also fills parent[] to store the
 path */
@@ -11,8 +10,6 @@ bool bfs(int rGraph[V][V], int s, int t, int parent[]) {
 	q.push(s);
 	visited[s] = true;
 	parent[s] = -1;
-
-	// Standard BFS Loop
 	while (!q.empty()) {
 		int u = q.front();
 		q.pop();
@@ -31,8 +28,7 @@ bool bfs(int rGraph[V][V], int s, int t, int parent[]) {
 	}
 	return false;
 }
-
-// Returns the maximum flow from s to t in the given graph
+// Returns the maximum flow from s to t
 int fordFulkerson(int graph[V][V], int s, int t) {
 	int u, v;
 	int rGraph[V]
@@ -41,16 +37,14 @@ int fordFulkerson(int graph[V][V], int s, int t) {
 		for (v = 0; v < V; v++)
 			rGraph[u][v] = graph[u][v];
 
-	int parent[V]; // This array is filled by BFS and to
-				// store path
-	int max_flow = 0; // There is no flow initially
+	int parent[V]; // BFS-filled (to store path)
+	int max_flow = 0; // no flow initially
 	while (bfs(rGraph, s, t, parent)) {
 		int path_flow = INT_MAX;
 		for (v = t; v != s; v = parent[v]) {
 			u = parent[v];
 			path_flow = min(path_flow, rGraph[u][v]);
 		}
-
 		for (v = t; v != s; v = parent[v]) {
 			u = parent[v];
 			rGraph[u][v] -= path_flow;

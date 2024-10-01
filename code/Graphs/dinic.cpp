@@ -1,11 +1,11 @@
-
+#include "header.h"
 using F = ll; using W = ll; // types for flow and weight/cost
 struct S{
-    const int v;            // neighbour
+    const int v;    // neighbour
     const int r;    // index of the reverse edge
     F f;            // current flow
     const F cap;    // capacity
-    const W cost;    // unit cost
+    const W cost;   // unit cost
     S(int v, int ri, F c, W cost = 0) :
         v(v), r(ri), f(0), cap(c), cost(cost) {}
     inline F res() const { return cap - f; }
@@ -41,7 +41,7 @@ struct Dinic{
     ll run() {
         ll flow = 0, f;
         while(true) {
-            fill(l.begin(), l.end(),-1); l[s]=0; // recalculate the layers
+            fill(l.begin(), l.end(),-1); l[s]=0;
             queue<int> q; q.push(s);
             while(!q.empty()){
                 auto u = q.front(); q.pop(); its[u] = edges[u].begin();

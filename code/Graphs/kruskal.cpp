@@ -1,6 +1,5 @@
 #include "header.h"
 #include "disjoint_set.h"
-// O(E log E)
 pair<set<pair<ll, ll>>, ll>  kruskal(vector<tuple<ll, ll, ll>>& edges, ll n) {
     set<pair<ll, ll>> ans;
     ll cost = 0;

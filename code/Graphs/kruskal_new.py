@@ -32,6 +32,3 @@ def kruskal(n, edges):
             continue
         spanning.append((u, v, w))
     return spanning
-
-# Example
-edges = [(1, 2, 10), (2, 3, 20)]
