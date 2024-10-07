@@ -1,5 +1,10 @@
 #include "../header.h"
 // example: SegmentTree<int, min> st(n, INT_MAX);
+const int& addOp(const int& a, const int& b) {
+    static int result;
+    result = a + b;
+    return result;
+}
 template <class T, const T&(*op)(const T&, const T&)>
 struct SegmentTree {
 	int n; vector<T> tree; T id;
