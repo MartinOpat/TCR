@@ -1,6 +1,4 @@
 from collections import defaultdict
-
-
 def dfs(s, adj, visited, topological):
     if visited[s]:
         return
@@ -9,8 +7,7 @@ def dfs(s, adj, visited, topological):
         dfs(i, adj, visited, topological)
     topological.append(s)
     print(topological, s)
-
-
+    
 n, m = map(int, input().split())
 adjacency_dict = defaultdict(set)
 for _ in range(m):

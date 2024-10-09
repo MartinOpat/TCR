@@ -4,7 +4,6 @@ void printArray(int p[], int n) {
 		cout << p[i] << " ";
 	cout << endl;
 }
-
 void printAllUniqueParts(int n) {
 	int p[n];	// array to store a partition
 	int k = 0;	// idx of last element in a partition

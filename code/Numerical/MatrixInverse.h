@@ -9,7 +9,6 @@
  * Status: Slightly tested
  */
 #pragma once
-
 int matInv(vector<vector<double>>& A) {
 	int n = sz(A); vi col(n);
 	vector<vector<double>> tmp(n, vector<double>(n));

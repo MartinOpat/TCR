@@ -4,7 +4,6 @@ vector<T> &rev(vector<T> &A) { reverse(A.begin(), A.end()); return A; }
 void copy_into(const vector<T> &A, vector<T> &B, size_t n) {
 	std::copy(A.begin(), A.begin()+min({n, A.size(), B.size()}), B.begin());
 }
-
 // Multiplicative inverse of A modulo x^n. Requires A[0] != 0!!
 vector<T> inverse(const vector<T> &A, int n) {
 	vector<T> Ai{A[0].inv()};

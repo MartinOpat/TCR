@@ -1,4 +1,3 @@
-
 class Node:
     def __init__(s, k, v):
         s.k, s.v, s.r, s.L, s.R = k, v, True, None, None

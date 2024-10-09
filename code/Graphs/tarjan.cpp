@@ -1,5 +1,4 @@
 #include "header.h"
-
 struct Tarjan {
 	vvi &edges;
 	int V, counter = 0, C = 0;

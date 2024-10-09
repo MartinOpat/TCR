@@ -13,9 +13,7 @@
  * Status: bruteforce-tested mod 5 for n <= 5
  */
 #pragma once
-
 const ll mod = 5; /** exclude-line */
-
 typedef vector<ll> Poly;
 ll linearRec(Poly S, Poly tr, ll k) {
 	int n = sz(tr);

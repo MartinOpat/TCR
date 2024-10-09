@@ -2,7 +2,6 @@ def vec(a,b):
     return (b[0]-a[0],b[1]-a[1])
 def det(a,b):
     return a[0]*b[1] - b[0]*a[1]
-
 def convexhull(P):
     if (len(P) == 1):
         return [(p[0][0], p[0][1])]

@@ -5,7 +5,6 @@ class Entry:
 
     def __lt__(self, other):
         return self.nr < other.nr
-
 class SA:
     def __init__(self, s):
         self.P = []

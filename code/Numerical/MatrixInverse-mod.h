@@ -10,9 +10,7 @@
  * Status: Slightly tested
  */
 #pragma once
-
 #include "../number-theory/ModPow.h"
-
 int matInv(vector<vector<ll>>& A) {
 	int n = sz(A); vi col(n);
 	vector<vector<ll>> tmp(n, vector<ll>(n));

@@ -1,5 +1,4 @@
 #include "../header.h"
-
 template<size_t len>
 struct pair_hash { // To make it hashable (pair<int, bitset<len>>)
     std::size_t operator()(const std::pair<int, std::bitset<len>>& p) const {

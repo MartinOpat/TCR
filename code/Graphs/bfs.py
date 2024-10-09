@@ -3,7 +3,6 @@ def bfs(g, roots, n):
     q = deque(roots)
     explored = set()
     distances = [0 if v in roots else float('inf') for v in range(n)]
-
     while len(q) != 0:
         node = q.popleft()
         if node in explored: continue

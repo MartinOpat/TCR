@@ -1,5 +1,4 @@
 #include "header.h"
-
 map<char, int> cti;
 int cti_size;
 template <int ALPHABET_SIZE, int (*mp)(char)>

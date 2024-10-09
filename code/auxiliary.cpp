@@ -1,5 +1,4 @@
 #include "header.h"
-
 int main() {
     // Read in a line including white space
     string line;

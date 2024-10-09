@@ -1,4 +1,4 @@
 # What TODO:
 - Check all (python) algorithms
 - Check for TODOs in main.tex and resolve them
-
+- Remove articulation points + bridges
