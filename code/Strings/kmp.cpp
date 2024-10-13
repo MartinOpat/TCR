@@ -9,16 +9,18 @@ void compute_prefix_function(string &w, vi &prefix) {
 		prefix[i] = k;
 	}
 }
-void knuth_morris_pratt(string &s, string &w) {
+vi knuth_morris_pratt(string &s, string &w) {
 	int q = -1;
-	vi prefix;
+	vi prefix, positions;
 	compute_prefix_function(w, prefix);
 	for(int i = 0; i < s.length(); ++i) {
 		while(q >= 0 && w[q + 1] != s[i]) q = prefix[q];
 		if(w[q + 1] == s[i]) q++;
 		if(q + 1 == w.length()) {
 			// Match at position (i - w.length() + 1)
+            positions.push_back(i - w.length() + 1);
 			q = prefix[q];
 		}
 	}
+    return positions;
 }
