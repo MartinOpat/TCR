@@ -25,6 +25,7 @@ class UnionFind:
 def kruskal(n, edges):
     uf = UnionFind(n)
     spanning = []
+    # Sort edges by asc. weight (check+-)
     edges.sort(key = lambda d: -d[2])
     while edges and len(spanning) < n-1:
         u, v, w = edges.pop()
