@@ -1,15 +1,9 @@
-/**
- * Description: A set (not multiset!) with support for finding the n'th
- * element, and finding the index of an element.
- * To get a map, change \texttt{null\_type}.
- * Time: O(\log N)
- */
-
-#include "../header.h"
+#include <bits/extc++.h> // !!!!
 using namespace __gnu_pbds;
+using namespace std;
 
 template<class T>
-using Tree = tree<T, null_type, less<T>, rb_tree_tag,
+using Tree = tree<T, null_type, less<T>,rb_tree_tag,
     tree_order_statistics_node_update>;
 
 void example() {
