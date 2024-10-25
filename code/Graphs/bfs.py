@@ -10,5 +10,6 @@ def bfs(g, roots, n):
         for neigh in g[node]:
             if neigh not in explored:
                 q.append(neigh)
-                distances[neigh] = distances[node] + 1
+                if distances[neigh] == float('inf'):
+                    distances[neigh] = distances[node] + 1
     return distances
