@@ -42,7 +42,7 @@
 \texttt{ull} $0,~2^{64}-1$ \\
 \texttt{\_\_int128} $-2^{127},~2^{127}-1$\\
 \texttt{ld} $-1.7e308,~1.7e308$, $18$ digits precision
-\subsubsection{Vim setup}
+\subsubsection{Xmodmap setup}
 \texttt{remove Lock = Caps\_Lock} \\
 \texttt{keysym Escape = Caps\_Lock} \\
 \texttt{keysym Caps\_Lock = Escape} \\
@@ -105,6 +105,13 @@
 	\entry{Hungarian algorithm}{Given J jobs and W workers (J $<=$ W), computes the minimum cost to assign each prefix of jobs to distinct workers.}{code/Graphs/hungarian.cpp}
 	\entry{Suc. shortest path}{Calculates max flow, min cost}{code/Graphs/succ_shortest_path.cpp}
 	\entry{Bipartite check}{~}{code/Graphs/bipartite_check.cpp}
+    \entry{Bipartite matching (Hopcroft-Karp)}{
+        Fast bipartite matching algorithm. Graph $g$ should be a list
+        of neighbors of the left partition, and $btoa$ should be a vector full of
+        -1's of the same size as the right partition. Returns the size of
+        the matching. $btoa[i]$ will be the match for vertex $i$ on the right side,
+        or $-1$ if it's not matched. Time: $O(\sqrt{V}E)$
+    }{code/Graphs/hopcroftkarp.cpp}
 	\entry{Find cycle directed}{~}{code/Graphs/find_cycle_directed.cpp}
 	\entry{Find cycle undirected}{~}{code/Graphs/find_cycle_undirected.cpp}
 	\entry{Tarjan's SCC}{~}{code/Graphs/tarjan.cpp}
@@ -208,6 +215,7 @@
 	\entry{UnionFind}{~}{code/Data Structures/union_find.cpp}
 	\entry{Indexed set}{Similar to set, but allows accessing elements by index using \texttt{find\_by\_order()} in $O(\log n)$}{code/Data Structures/indexed_set.cpp}
 	\entry{Order Statistics Tree}{A set (not multiset!) with support for finding the n'th element, and finding the index of an element. To get a map, change \texttt{null\_type}.$O(\log N)$}{code/Data Structures/order_statistics_tree.cpp}
+    \entry{Range minimum queries}{Answers range minimum queries in constant time after $O(V\log V)$ preproc.}{code/Data Structures/rmq.cpp}
 	
 \section{Other Mathematics}
 	\subsection{Helpful functions}
