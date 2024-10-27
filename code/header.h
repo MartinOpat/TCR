@@ -19,8 +19,8 @@ using namespace std;
 #define in(el, cont) (cont.find(el) != cont.end())// sets/maps
 #define all(x) x.begin(), x.end()
 
-constexpr int INF  = 2000000010;
-constexpr ll LLINF = 9000000000000000010LL;
+constexpr int INF  = INT_MAX;
+constexpr ll LLINF = LONG_LONG_MAX;
 
 // int main() {
 // 	ios::sync_with_stdio(false);  // do not use cout + printf
