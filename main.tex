@@ -79,7 +79,7 @@
 	\pyentry{Suffix Array}{~}{code/Strings/suffixarray.py}
 	\pyentry{Longest common pref.}{with the suffix array built we can do, e.g., longest common prefix of x, y with suffixarray where x,y are suffixes of the string used $O(\log n)$}{code/Strings/lcpref.py}
 	\pyentry{Edit distance}{~}{code/Strings/edit_distance.py}
-	\pyentry{Bitstring}{Slower than a set for many elements, but hashable}{code/Strings/bitstring.py}
+	\pyentry{Bitstring}{Slower than a set for many elements, but hashable. Also see \texttt{Hashing}}{code/Strings/bitstring.py}
 
 \subsection{Geometry}
 	\pyentry{Convex Hull}{~}{code/Geometry/convexhull.py}
@@ -180,7 +180,7 @@
 	\entry{KMP}{~}{code/Strings/kmp.cpp}
 	\entry{Aho-Corasick}{Also can be used as Knuth-Morris-Pratt algorithm}{code/Strings/aho_corasick.cpp}
 	\entry{Long. palin. subs}{Manacher - $O(n)$}{code/Strings/manacher.cpp}
-	\entry{Bitstring}{Slower than an unordered set (for many elements), but hashable}{code/Strings/bitstring.cpp}
+	% \entry{Bitstring}{Slower than an unordered set (for many elements), but hashable. Also see \texttt{Hashing}}{code/Strings/bitstring.cpp}
 
 \subsection{Geometry}
 	\entry{essentials.cpp}{~}{code/Geometry/essentials.cpp}
@@ -201,6 +201,7 @@
 	\entry{Convolution}{Precise up to 9e15}{code/Other/convo.cpp}
 	\entry{Partitions of $n$}{Finds all possible partitions of a number}{code/Other/all_partitions.cpp}
 	\entry{Ternary search}{Find the smallest i in $[a,b]$ that maximizes $f(i)$, assuming that $f(a) < \dots < f(i) \ge \dots \ge f(b)$. To reverse which of the sides allows non-strict inequalities, change the $<$ marked with (A) to $<=$, and reverse the loop at (B). To minimize $f$, change it to $>$, also at (B). $O(\log(b-a))$}{code/Other/TernarySearch.h}
+	\entry{Hashing}{Also see \texttt{Primes} in \texttt{Other Mathematics}}{code/Other/hashing.cpp}
 
 \subsection{Other Data Structures}
 	\entry{Disjoint set}{(i.e. union-find)}{code/Data Structures/disjoint_set.cpp}
