@@ -85,14 +85,12 @@
 	\pyentry{Convex Hull}{~}{code/Geometry/convexhull.py}
 	\pyentry{Geometry}{~}{code/Geometry/geometry.py}
 
-\subsection{Other Algorithms}
-	\pyentry{Rotate matrix}{~}{code/Other/rotate_matrix.py}
+% \subsection{Other Algorithms}
+% 	\pyentry{Rotate matrix}{~}{code/Other/rotate_matrix.py}  % This is kinda useless
 
-\subsection{Other Data Structures}
-	% \pyentry{Segment Tree}{~}{code/Data Structures/segment_tree.py}
-	\pyentry{Trie}{~}{code/Data Structures/trie.py}
-	% \pyentry{RedBlack tree}{~}{code/Data Structures/llrbst.py}  % TODO: too long so just use cpp
-
+% \subsection{Other Data Structures}  % Use cpp tbh
+% 	% \pyentry{Segment Tree}{~}{code/Data Structures/segment_tree.py}
+% 	\pyentry{Trie}{~}{code/Data Structures/trie.py}
 
 
 \section{C++}
@@ -120,7 +118,7 @@
 	% \entry{Articulation points}{(i.e. cut off points)}{code/Graphs/find_articulation_points.cpp}
 	\entry{Topological sort}{~}{code/Graphs/topo_sort.cpp}
 	\entry{Bellmann-Ford}{Same as Dijkstra but allows neg. edges}{code/Graphs/bellmannford.cpp}
-	\entry{Ford-Fulkerson}{Basic Max. flow}{code/Graphs/ford-fulk.cpp}
+	% \entry{Ford-Fulkerson}{Basic Max. flow}{code/Graphs/ford-fulk.cpp}  % Aruguibly redundant since we got Edmonds-Karp
 	\entry{Dinic max flow}{$O(V^2E)$, $O(Ef)$}{code/Graphs/dinic.cpp}
 
 	% TODO: Re-implement this to 100% match our graph implementation (?)
@@ -238,7 +236,7 @@
 			$n = p_1^{k_1-1}\cdot(p_1-1) \cdot \hdots \cdot p_r^{k_r-1}\cdot(p_r-1)$, where $p_1^{k_1} \cdot \hdots \cdot p_r^{k_r}$ is the prime factorization of $n$.
 		}
 		{code/Other Math/euler_totient_func.cpp}
-		\pyentry{Totient (again but .py)}{~}{code/Other Math/totient.py} % TODO: Possibly remove one of the totient
+		% \pyentry{Totient (again but .py)}{~}{code/Other Math/totient.py}
 		\subsubsection*{Formulas}
 			$\Phi(n)$ counts all numbers in ${1,\hdots,n-1}$ coprime to $n$. \\
 			$a^{\varphi (n)} \equiv 1 \mod n$, $a$ and $n$ are coprimes. \\
