@@ -350,11 +350,11 @@
 			Here $Z$ is the cycle index. Note: you can cleverly deal with even/odd sizes
 			by setting some $t_i$ to $-1$.
 		
-	\subsubsection*{Lucas Theorem}
-		If $p$ is prime, then:
-		$$ \frac{p^a}{k} \equiv 0 (\mod p) $$
-		Thus for non-negative integers $m = m_kp^k + \hdots + m_1 p + m_0$ and $n = n_k p^k + \hdots + n_1p + n_0$:
-		$$ \frac{m}{n} =  \Pi_{i=0}^{k} \frac{m_i}{n_i} \mod p $$ Note: The fraction's mean integer division.
+	% \subsubsection*{Lucas Theorem}  % should be nCk instead of frac here anyway
+	% 	If $p$ is prime, then:
+	% 	$$ \frac{p^a}{k} \equiv 0 (\mod p) $$
+	% 	Thus for non-negative integers $m = m_kp^k + \hdots + m_1 p + m_0$ and $n = n_k p^k + \hdots + n_1p + n_0$:
+	% 	$$ \frac{m}{n} =  \Pi_{i=0}^{k} \frac{m_i}{n_i} \mod p $$ Note: The fraction's mean integer division.
 
     \subsection{Recurrences}
         If $a_n = c_1 a_{n-1} + \dots + c_k a_{n-k}$, and $r_1, \dots, r_k$ are distinct roots of $x^k - c_1 x^{k-1} - \dots - c_k$, there are $d_1, \dots, d_k$ s.t.
@@ -474,15 +474,15 @@
 		$$S_2(n, 1) = S_2(n, n) = 1$$
 		$$ S_2(n, k) = \frac{1}{k!}\sum_{i=0}^k (-1)^{k-i}\binom{k}{i}i^n $$
 
-	\subsubsection*{Catalan Numbers} - Number of correct bracket sequence consisting of $n$ opening and $n$
-		closing brackets. \\
-		The number of ways to completely parenthesize $n+1$ factors. \\
-		The number of triangulations of a convex polygon with $n+2$
-		sides (i.e. the number of partitions of polygon into disjoint triangles by using the diagonals). \\
-		The number of ways to connect the $2n$
-		points on a circle to form n disjoint i.e. non-intersecting chords.
-		$$ C_n = \frac{1}{n+1} \binom{2n}{n}$$
-		$$ C_0 = 1,~C_1 = 1, ~C_n = \sum_{k=0}^{n-1}C_k C_{n-1-k}  $$
+	% \subsubsection*{Catalan Numbers} - Number of correct bracket sequence consisting of $n$ opening and $n$
+	% 	closing brackets. \\
+	% 	The number of ways to completely parenthesize $n+1$ factors. \\
+	% 	The number of triangulations of a convex polygon with $n+2$
+	% 	sides (i.e. the number of partitions of polygon into disjoint triangles by using the diagonals). \\
+	% 	The number of ways to connect the $2n$
+	% 	points on a circle to form n disjoint i.e. non-intersecting chords.
+	% 	$$ C_n = \frac{1}{n+1} \binom{2n}{n}$$
+	% 	$$ C_0 = 1,~C_1 = 1, ~C_n = \sum_{k=0}^{n-1}C_k C_{n-1-k}  $$
 
 	\subsubsection*{Narayana numbers} The number of expressions containing n pairs of parentheses, which are correctly matched and which contain k distinct nestings. 
 		$$ N(n,k) = \frac{1}{n} \frac{n}{k} \frac{n}{k-1} $$
@@ -500,6 +500,13 @@
 		\[ B(p^m+n)\equiv mB(n)+B(n+1) \pmod{p} \]
 
 	\subsubsection*{Catalan numbers}
+		Number of correct bracket sequence consisting of $n$ opening and $n$
+		closing brackets. \\
+		The number of ways to completely parenthesize $n+1$ factors. \\
+		The number of triangulations of a convex polygon with $n+2$
+		sides (i.e. the number of partitions of polygon into disjoint triangles by using the diagonals). \\
+		The number of ways to connect the $2n$
+		points on a circle to form n disjoint i.e. non-intersecting chords.
 		\[ C_n=\frac{1}{n+1}\binom{2n}{n}= \binom{2n}{n}-\binom{2n}{n+1} = \frac{(2n)!}{(n+1)!n!} \]
 		\[ C_0=1,\ C_{n+1} = \frac{2(2n+1)}{n+2}C_n,\ C_{n+1}=\sum C_iC_{n-i} \]
 		${C_n = 1, 1, 2, 5, 14, 42, 132, 429, 1430, 4862, 16796, 58786, \dots}$
