@@ -27,9 +27,7 @@ class DisjointSet {
 
             if (x == y) return;
             if (rank[x] < rank[y]) {
-                T z = x;
-                x = y;
-                y = z;
+                swap(x,y);
             }
             parent[y] = x;
             if (rank[x] == rank[y]) rank[x]++;

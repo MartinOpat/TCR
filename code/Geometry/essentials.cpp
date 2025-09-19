@@ -13,6 +13,8 @@ struct P {		// may also be used as a 2D vector
 	P perp() const { return P{y, -x}; }
 	C lensq() const { return x*x + y*y; }
 	ld len() const { return sqrt((ld)lensq()); }
+	static C distsq(const P &p1, const P &p2) {
+		return (p1-p2).lensq(); }
 	static ld dist(const P &p1, const P &p2) {
 		return (p1-p2).len(); }
 	bool operator==(const P &r) const {

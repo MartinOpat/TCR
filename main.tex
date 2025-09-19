@@ -36,7 +36,7 @@
 \section{Setup}
 \subsubsection{Tips}
 \textbf{Test session}: Check \texttt{\_\_int128}, GNU builtins, and end of line whitespace requirements. \\
-\textbf{C++ var. limits}: 
+\textbf{C++ var. limits}:
 \texttt{int} $-2^{31},~2^{31}-1$ \\
 \texttt{ll} $-2^{63},~2^{63}-1$ \\
 \texttt{ull} $0,~2^{64}-1$ \\
@@ -63,7 +63,7 @@
 	\pyentry{Kruskal (UnionFind)}{Min. span. tree}{code/Graphs/kruskal_new.py}
 	\pyentry{Prim}{Min. span. tree - good for dense graphs}{code/Graphs/prim.py}
 	% TODO: If space add longest path
-	
+
 \subsection{Num. Th. / Comb.}
 	\pyentry{nCk \% prime}{p must be prime and k $<$ p}{code/Number Theory/nCk_mod_prime.py}
 	\pyentry{Sieve of E.}{$O(n)$ so actually faster than C++ version, but more memory}{code/Number Theory/better_sieve.py}
@@ -71,7 +71,7 @@
 	\pyentry{Chinese rem.}{an x such that $\forall$ y,m: yx = 1 mod m requires all m,m' to be $>=$1 and coprime}{code/Number Theory/chinese_remainder.py}
 	\pyentry{Bezout}{~}{code/Number Theory/bezout.py}
 	\pyentry{Gen. chinese rem.}{~}{code/Number Theory/general_chinese_remainder.py}
-	
+
 \subsection{Strings}
 	\pyentry{Longest common substr.}{(Consecutive) $O(mn)$ time, $O(m)$ space}{code/Strings/leastcommonsubstring.py}
 	\pyentry{Longest common subseq.}{(Non-consecutive)}{code/Strings/lcs.py}
@@ -138,7 +138,7 @@
 	\entry{Template (for this section)}{~}{code/Numerical/template.cpp}
 	  \entry{Polynomial}{~}{code/Numerical/Polynomial.h}
 	  \entry{Poly Roots}{Finds the real roots to a polynomial.$O(n^2 \log(1/\epsilon))$}{code/Numerical/PolyRoots.h}
-	
+
 	  \entry{Golden Section Search}{Finds the argument minimizing the function $f$ in the interval $[a,b]$ assuming $f$ is unimodal on the interval, i.e. has only one local minimum and no local maximum. The maximum error in the result is $eps$. Works equally well for maximization with a small change in the code. See TernarySearch.h in the Various chapter for a discrete version. $O(\log((b-a) / \epsilon))$}{code/Numerical/GoldenSectionSearch.h}
 	  \entry{Hill Climbing}{Poor man's optimization for unimodal functions.}{code/Numerical/HillClimbing.h}
 	  \entry{Integration}{Simple integration of a function over an interval using Simpson's rule. The error should be proportional to $h^4$, although in practice you will want to verify that the result is stable to desired precision when epsilon changes.}{code/Numerical/Integrate.h}
@@ -162,7 +162,7 @@
 		% \entry{FastFourierTransformMod.h}
 		% \entry{NumberTheoreticTransform.h}
 		% \entry{FastSubsetTransform.h}
-	
+
 
 \subsection{Num. Th. / Comb.}
 	\entry{Basic stuff}{~}{code/Number Theory/elementary.cpp}
@@ -190,7 +190,7 @@
 	% \entry{Matrix Solve}{~}{code/Other/matrix_solve.cpp}  % Add if space (but probably not)
 	% \entry{Matrix Exp.}{~}{code/Other/matrix_exp.cpp}
 	\entry{Finite field}{For FFT}{code/Other/fin_field.cpp}
-	\entry{Complex field}{For FFR}{code/Other/complex_field.cpp}
+	\entry{Complex field}{For FFT}{code/Other/complex_field.cpp}
 	\entry{FFT}{~}{code/Other/fft.cpp}
 	\entry{Polyn. inv. div.}{~}{code/Other/poly.cpp}
 	\entry{Linear recurs.}{Given a linear recurrence of the form
@@ -276,7 +276,7 @@
 		\mod p$, with the convention that $n_i < m_i \implies \binom{n_i}{m_i} =0$.
 
 		\subsubsection*{Fibonacci} (See also number theory section) \\
- 		$$\sum_{0 \leq k \leq n} \binom{n-k}{k} = F_{n+1}$$ 
+ 		$$\sum_{0 \leq k \leq n} \binom{n-k}{k} = F_{n+1}$$
 		$$F_n = \frac{1}{\sqrt{5}} \left(\frac{1+\sqrt{5}}{2}\right)^n - \frac{1}{\sqrt{5}}\left(\frac{1-\sqrt{5}}{2}\right)^n$$
 		$\sum_{i=1}^{n} {F_i} = F_{n+2}-1$, $\sum_{i=1}^{n} {F_i^2} = F_{n}F_{n+1}$
 		$$\text{gcd}(F_m, F_n) = F_{\text{gcd}(m, n)}$$
@@ -349,7 +349,7 @@
 			permutation on $X$. Note we get the original formula by setting all $t_i=1$.
 			Here $Z$ is the cycle index. Note: you can cleverly deal with even/odd sizes
 			by setting some $t_i$ to $-1$.
-		
+
 	% \subsubsection*{Lucas Theorem}  % should be nCk instead of frac here anyway
 	% 	If $p$ is prime, then:
 	% 	$$ \frac{p^a}{k} \equiv 0 (\mod p) $$
@@ -376,13 +376,13 @@
 	\subsection{Quadrilaterals}
         With side lengths $a,b,c,d$, diagonals $e, f$, diagonals angle $\theta$, area $A$ and
         magic flux $F=b^2+d^2-a^2-c^2$:
-        
+
         \[ 4A = 2ef \cdot \sin\theta = F\tan\theta = \sqrt{4e^2f^2-F^2} \]
-        
+
          For cyclic quadrilaterals the sum of opposite angles is $180^\circ$,
         $ef = ac + bd$, and $A = \sqrt{(p-a)(p-b)(p-c)(p-d)}$.
-        
-        
+
+
 	\subsection{Triangles}
         Side lengths: $a,b,c$\\
         Semiperimeter: $p=\dfrac{a+b+c}{2}$\\
@@ -414,21 +414,21 @@
         	a\sin x+b\cos x&=r\sin(x+\phi)
         \end{align*}
         where $r=\sqrt{a^2+b^2}, \phi=\operatorname{atan2}(b,a)$.
-        
+
 
     \subsection{Combinatorics}
         Combinations and Permutations
-        
+
         $P(n,r) = \frac{n!}{(n-r)!}$
-        
+
         $C(n,r) = \binom{n}{r} = \frac{n!}{r!(n-r)!}$
-        
+
         $C(n,r) = C(n, n-r)$
 
 	\subsection{Cycles}
 		Let $g_S(n)$ be the number of $n$-permutations whose cycle lengths all belong to the set $S$. Then
 		$$\sum_{n=0} ^\infty g_S(n) \frac{x^n}{n!} = \exp\left(\sum_{n\in S} \frac{x^n} {n} \right)$$
-		
+
 	\subsection{Labeled unrooted trees}
 		\# on $n$ vertices: $n^{n-2}$ \\
 		\# on $k$ existing trees of size $n_i$: $n_1n_2\cdots n_k n^{k-2}$ \\
@@ -445,7 +445,7 @@
 			$p(n)$ & 1 & 1 & 2 & 3 & 5 & 7 & 11 & 15 & 22 & 30 & 627 & $\mathtt{\sim}$2e5 & $\mathtt{\sim}$2e8 \\
 		\end{tabular}
 		\end{center}
-	
+
 	\subsection{Numbers}
 	\subsubsection*{Bernoulli numbers}
 		EGF of Bernoulli numbers is $B(t)=\frac{t}{e^t-1}$ (FFT-able).
@@ -484,7 +484,7 @@
 	% 	$$ C_n = \frac{1}{n+1} \binom{2n}{n}$$
 	% 	$$ C_0 = 1,~C_1 = 1, ~C_n = \sum_{k=0}^{n-1}C_k C_{n-1-k}  $$
 
-	\subsubsection*{Narayana numbers} The number of expressions containing n pairs of parentheses, which are correctly matched and which contain k distinct nestings. 
+	\subsubsection*{Narayana numbers} The number of expressions containing n pairs of parentheses, which are correctly matched and which contain k distinct nestings.
 		$$ N(n,k) = \frac{1}{n} \frac{n}{k} \frac{n}{k-1} $$
 
 	\subsubsection*{Eulerian numbers}
@@ -526,9 +526,9 @@
         \subsubsection*{Bayes' Theorem}
 
         $P(B|A) = \frac{P(A|B) P(B)}{P(A)}$
-        
+
         $P(B|A) = \frac{P(A|B)P(B)}{P(A|B)P(B) + P(A|\bar{B})P(\bar{B})}$
-        
+
         $P(B_k|A) = \frac{P(A|B_k)P(B_k)}{P(A|B_1)P(B_1) \cdot ... \cdot P(A|B_n)P(B_n)}$
 
         \subsubsection*{Expectation}
@@ -545,7 +545,7 @@
         a,b \in \mathbb{Z^+} \implies \exists s,t \in \mathbb{Z}: \, \gcd(a,b) = sa + tb
         $$
         \subsubsection*{Bézout's identity}
-	For $a \neq $, $b \neq 0$, then $d=gcd(a,b)$ is the smallest positive integer for which there are integer solutions to
+	For $a \neq 0$, $b \neq 0$, then $d=gcd(a,b)$ is the smallest positive integer for which there are integer solutions to
 	$$ax+by=d$$
 	If $(x,y)$ is one solution, then all solutions are given by
 	$$\left(x+\frac{kb}{\gcd(a,b)}, y-\frac{ka}{\gcd(a,b)}\right), \quad k\in\mathbb{Z}$$
@@ -563,7 +563,7 @@
         (\text{prime}(p)) \land (p \nmid a) \implies (a^{p-1} \equiv 1 \mod p)
         $$
         $$
-        (\text{prime}(p)) \implies (a^p \equiv a \mod p) 
+        (\text{prime}(p)) \implies (a^p \equiv a \mod p)
         $$
 		\subsubsection*{Euler's Theorem}
 		$$
@@ -603,9 +603,11 @@
   $ \sum_{d | n} \mu(d) = [ n = 1] $ (very useful)
 
   $ g(n) = \sum_{n|d} f(d) \Leftrightarrow f(n) = \sum_{n|d} \mu(d/n)g(d)$
-
- $ g(n) = \sum_{1 \leq m \leq n} f(\left\lfloor\frac{n}{m}\right \rfloor ) \Leftrightarrow f(n) = \sum_{1\leq m\leq n} \mu(m)g(\left\lfloor\frac{n}{m}\right\rfloor)$
-
+  \vspace{-0.8\baselineskip}
+  \begin{align*}
+	\textstyle g(n) &= \textstyle\sum_{1 \leq m \leq n} f(\left\lfloor\frac{n}{m}\right \rfloor )\\
+	\textstyle\Leftrightarrow f(n) &= \textstyle\sum_{1\leq m\leq n} \mu(m)g(\left\lfloor\frac{n}{m}\right\rfloor)
+  \end{align*}
 
 
 \subsection{Discrete distributions}

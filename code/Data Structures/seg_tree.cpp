@@ -13,7 +13,7 @@ struct SegmentTree {
 		for (tree[i+n] = val, i = (i+n)/2; i > 0; i /= 2)
 			tree[i] = op(tree[2*i], tree[2*i+1]);
 	}
-	T query(int l, int r) {
+	T query(int l, int r) { // []
 		T lhs = T(id), rhs = T(id);
 		for (l += n, r += n; l < r; l >>= 1, r >>= 1) {
 			if (  l&1 ) lhs = op(lhs, tree[l++]);
